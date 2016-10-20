@@ -1,0 +1,65 @@
+<div class="col-sm-3 ng-pristine ng-valid ng-scope ng-touched" tabindex="0" aria-invalid="false">
+    <div class="block_list pt0">
+
+
+
+        <div class="w100p ng-pristine ng-valid ng-scope ng-touched" tabindex="0" aria-invalid="false">
+
+
+            <div style="min-height: 333px;" class="card panel panel-default w100p">
+                <div class="panel-body card-body card-body01 pb0 pt5">
+
+
+                    <button title="Move to known List" ng-click="addToKnown(usr._id)" ng-model="user" class="btn btn-info user-btn ng-pristine ng-untouched ng-valid" tabindex="0" aria-invalid="false">
+                     <span  ng-class='isKnown(usr._id) ? "fa fa-plus known" : "fa fa-plus"'></span>
+                    </button>
+                    <button title="Move to Blocked List" ng-click="addToBlocked(usr._id)" class="btn btn-info pull-right user-btn ng-pristine ng-untouched ng-valid" tabindex="0" aria-invalid="false">
+                        <span ng-class='isBlocked(usr._id) ? "fa fa-minus blocked" : "fa fa-minus"' ></span>
+                    </button>
+                    <!--<img class="img-responsive user-image" ng-src="http://res.cloudinary.com/hzif3kbk7/image/upload/c_scale,h_200,w_200/v1464755705/misc/Businesswoman.svg" src="http://res.cloudinary.com/hzif3kbk7/image/upload/c_scale,h_200,w_200/v1464755705/misc/Businesswoman.svg">-->
+                    <img ng-src="{{usr.picture}}" class='img-responsive user-image' /> 
+
+                </div>
+
+                <div class="info_sect info_sect01">
+                    <h4 class="ng-binding mt0 mb0"><b>{{usr.name}}</b></h4>
+                    <h6 class="ng-binding ng-binding mb3">{{usr.title}}</h6>
+                    <!--<h6 class="ng-binding">{{usr.email}}</h6>-->
+
+                    <h6 class="ng-binding" ng-show="usr.ShowMobileNum">{{usr.mobilephone}} &nbsp;</h6>
+                    <h6 class="ng-binding" ng-show="!usr.ShowMobileNum">{{usr.phone}}&nbsp;</h6>
+                </div>
+                <div class="info_sect_totel mt5">
+                    <div class="col-sm-4">
+                        <i class="fa fa-cutlery"></i>
+                        <span>{{usr.lunchCount}}</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="fa fa-users"></i>
+                        <span>43</span>
+                    </div>
+                    <div class="col-sm-4">
+                        <i class="fa fa-share-alt"></i>
+                        <span>{{usr.DegreeofConnectedness|number:2}} </span>
+                    </div>
+                </div>
+
+                <div class="info_sect_buttons">
+                    <a class="email_button" href="mailto:">Email</a>
+                    <!--<a class="Linkedin_button" target="_blank" href="#">Linkedin</a>-->
+                    <a class="Linkedin_button" target="_blank" href="{{usr.linkedin}}" ng-show="usr.showlinkedBtn">Linkedin</a>
+                    <a class="Linkedin_button not-active" href="#" ng-show="!usr.showlinkedBtn" disabled="disabled">Linkedin</a>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</div>

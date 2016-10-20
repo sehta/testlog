@@ -1,0 +1,72 @@
+<div class='adminViewContainer dashboard-header'> 
+    <div layout="row">
+      
+        
+                <div flex='33'>
+                    <div layout="column">
+                        <div flex ng-repeat="restaurant in restaurants" class='userList'>
+                            <div class='userbox' ng-click="$parent.selectedRestaurant = restaurant">{{ restaurant.name }}</div>
+                        </div>
+                    </div>
+                </div>
+        <div ng-show="selectedRestaurant!=null" flex='66' class="details" layout="column">
+
+            <span>{{ selectedRestaurant.name }} </span>
+            <span>Avg. Rating: {{ selectedRestaurant.avgrating }} </span>
+            <span>Code: {{ selectedRestaurant.code }} </span>
+            <span>Address: {{ selectedRestaurant.address }}</span>
+            <span>Zip: {{ selectedRestaurant.zip }}</span>
+            <span>Price: {{ selectedRestaurant.price }}</span>
+            <span>Phone: {{ selectedRestaurant.phone }}</span>
+            <span>Halal: {{ selectedRestaurant.halal }}</span>
+            <span>Veg: {{ selectedRestaurant.veg }}</span>
+            <span>Cuisine: <ul><li ng-repeat="cuisine in selectedRestaurant.cuisine">{{ cuisine }}</li></ul></span>
+            <span>Total: {{ selectedRestaurant.total }}</span>
+            <!--<span>Discounts: <ul><li ng-repeat="dis in selectedRestaurant.discounts">{{ dis.discountPrice }}</li></ul></span>-->
+            <table datatable="ng" dt-options="dtOptions3" dt-column-defs="dtColumnDefs3">
+                <thead>
+                    <tr>
+                        <th>Discount Price</th>
+                        <th>Unit</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="dis in selectedRestaurant.discounts">
+                        <td>{{ dis.discountPrice }}</td>
+                        <td>{{ dis.discountUnit }}</td>
+                        <td>{{ dis.discountDate | date:'MM/dd/yyyy' }} </td>
+                        <td>
+                            <input type="button" class="btn btn-danger" value="Delete" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <form id="discountform" name="discountform" ng-submit="addDiscount()">
+                <div class='row'>
+                    <md-input-container class='col-sm-3'>
+                        <label>Discount Price</label>
+                        <input type="number" ng-model="newdiscount.discountPrice" required />
+                    </md-input-container>
+                    <md-input-container class='col-sm-3'>
+                        <select style="top: 33px;position:relative;" ng-model="newdiscount.discountUnit" required>
+                            <option value="">Select Unit</option>
+                            <option value="%">Percentage</option>
+                            <option value="$">Fixed</option>
+                        </select>
+                    </md-input-container>
+                    <md-input-container class='col-sm-3'>
+                        <label style="position: absolute !important;">Discount on Date</label>
+                        <datepicker style="top: 24px;" date-format="MM/dd/yyyy">
+                            <input ng-model="newdiscount.discountDate" type="text" />
+                        </datepicker>
+                    </md-input-container>
+                    <md-input-container class='col-sm-2'>
+                        <button ng-click="newdiscount.restaurantid=selectedRestaurant._id" class="btn btn-info" type="submit">Save</button>
+                    </md-input-container>
+                </div>
+            </form>
+        </div>
+            </div>
+    </div>

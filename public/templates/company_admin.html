@@ -1,0 +1,1354 @@
+﻿<!--    Add Company Pop-up -->
+<div class="modal fade" id="myModal0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header clearfix ">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <i class="pg-close fs-14"></i>
+                </button>
+                <h4 class="p-b-5"><span class="semi-bold">Add New Company</span> </h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- START PANEL -->
+
+
+                        <div class="panel-body">
+
+                            <form class="" role="form">
+                                <div pg-form-group class="form-group form-group-default required ">
+                                    <label>Company Name</label>
+                                    <input type="text" class="form-control" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default form-group-default-select required">
+                                            <label class="">Country</label>
+                                            <select class="form-control">
+                                                <option>United States</option>
+                                                <option>Argentina</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default form-group-default-select required">
+                                            <label class="">City</label>
+                                            <select class="form-control">
+                                                <option>Colombia</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default required">
+                                            <label>Branch Name</label>
+                                            <input type="text" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div pg-form-group class="form-group form-group-default">
+                                            <label>Reg. Date</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div pg-form-group class="form-group form-group-default required">
+                                            <label>logo</label>
+                                            <div class="upload">
+                                                <input type="file" id="myFile" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+                            </form>
+                        </div>
+
+                        <!-- END PANEL -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button id="add-app" type="button" class="btn btn-primary  btn-cons" ng-click="addApp()">Add</button>
+                <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-cons "> Close</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+</div>
+
+<!--    Add Company Pop-up End -->
+<!--  START CONTAINER FLUID -->
+
+<div class="container-fluid padding-25 sm-padding-10 sm-gutter">
+    <!-- START ROW -->
+
+    <div class="panel panel-transparent ">
+        <!-- Nav tabs -->
+
+        <ul class="nav nav-tabs nav-tabs-fillup" data-init-reponsive-tabs="dropdownfx">
+            <li class="active">
+                <a data-toggle="tab" href="/app/adminDashboard/#tab-fillup1"><span>Enterprises </span></a>
+            </li>
+            <li class="">
+                <a data-toggle="tab" href="/app/adminDashboard/#tab-fillup2"><span>Restaurants</span></a>
+            </li>
+
+
+        </ul>
+
+
+
+
+        <!-- Tab panes -->
+        <div class="tab-content mt15">
+            <div class="tab-pane active" id="tab-fillup1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-8 panel no-border bg-success no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                                    <i class="fa fa-pie-chart right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading top-left top-right">
+                                                    <div class="panel-title text-black hint-text">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Total Billing
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="panel-controls">
+                                                        <ul>
+                                                            <li>
+                                                                <a data-toggle="refresh" class="portlet-refresh text-black" ng-click="refresh()">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height ">
+                                            <div class="col-xs-height col-top relative">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="p-l-20">
+                                                            <h3 class="no-margin p-b-5 text-white">$12,000</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-9 panel no-border bg-primary no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                                    <i class="fa fa-slideshare right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading  top-left top-right">
+                                                    <div class="panel-title text-black">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Total  users
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="panel-controls">
+                                                        <ul>
+                                                            <li>
+                                                                <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="p-l-20 p-t-20">
+                                                    <h3 class="no-margin p-b-5 text-white">3,600</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-9 panel no-border widget-6 no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                                    <i class="fa fa-spoon right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading  top-left top-right">
+                                                    <div class="panel-title text-black">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Total Lunches
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="p-l-20 p-t-20">
+                                                    <h3 class="no-margin p-b-5 text-white">360</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-8 panel no-border bg-complete no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                                    <i class="fa fa-usd right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading top-left top-right">
+                                                    <div class="panel-title text-black hint-text">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Billing This Month
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height ">
+                                            <div class="col-xs-height col-top relative">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="p-l-20">
+                                                            <h3 class="no-margin p-b-5 text-white">$ 5,600 <i class="fa fa-sort-desc"></i> </h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-9 panel no-border btn-info no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                                    <i class="fa fa-slideshare right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading  top-left top-right">
+                                                    <div class="panel-title text-black">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Active Users
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="panel-controls">
+                                                        <ul>
+                                                            <li>
+                                                                <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="p-l-20 p-t-20">
+                                                    <span class="small hint-text text-uppercase all-caps">This Week</span>
+                                                    <h3 class="no-margin p-b-5 text-white">580 <i class="fa fa-sort-up"></i></h3>
+                                                    <div class="clearfix"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-9 panel no-border  bg-success no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                                    <i class="fa fa-cutlery right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading  top-left top-right">
+                                                    <div class="panel-title text-black">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Lunches
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="panel-controls">
+                                                        <ul>
+                                                            <li>
+                                                                <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="p-l-20 p-t-20">
+                                                    <span class="small hint-text whit-color all-caps">This Week</span>
+                                                    <h3 class="no-margin p-b-5 text-white">52 <i class="fa fa-sort-up"></i></h3>
+                                                    <div class="clearfix"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 hidden-lg visible-md visible-xlg col-xlg-4 m-b-10">
+                        <!-- START WIDGET -->
+                        <div class="widget-15 panel panel-condensed  no-margin no-border widget-loader-circle" pg-portlet progress="circle" on-refresh="refreshTest('.widget-15')">
+                            <div class="panel-heading">
+                                <div class="panel-controls">
+                                    <ul>
+                                        <li>
+                                            <a ng-click="collapse()" class="portlet-collapse" data-toggle="collapse">
+                                                <i class="portlet-icon portlet-icon-collapse"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                                <i class="portlet-icon portlet-icon-refresh"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="panel-body no-padding">
+                                <ul class="nav nav-tabs nav-tabs-simple">
+                                    <li class="active">
+                                        <a href="#widget-15-tab-1" class="p-t-5">
+                                            APPL<br>
+                                            22.23<br>
+                                            <span class="text-success">+60.223%</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#widget-15-tab-2" class="p-t-5">
+                                            FB<br>
+                                            45.97<br>
+                                            <span class="text-danger">-06.56%</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#widget-15-tab-3" class="p-t-5">
+                                            GOOG<br>
+                                            22.23<br>
+                                            <span class="text-success">+60.223%</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content p-l-20 p-r-20">
+                                    <div class="tab-pane no-padding active" id="widget-15-tab-1">
+                                        <div class="full-width">
+                                            <div class="full-width">
+                                                <rickshaw rickshaw-options="widget_15_2_options" rickshaw-features="widget_15_2_features" rickshaw-series="widget_15_2_series" class="widget-15-chart rickshaw-chart full-height">
+                                                </rickshaw>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane no-padding" id="widget-15-tab-2">
+                                    </div>
+                                    <div class="tab-pane" id="widget-15-tab-3">
+                                    </div>
+                                </div>
+                                <div class="p-t-20 p-l-20 p-r-20 p-b-30">
+                                    <div class="row">
+                                        <div class="col-md-9">
+                                            <p class="fs-16 text-black">
+                                                Apple's Motivation - Innovation <br>
+                                                distinguishes between A leader and a follower.
+                                            </p>
+                                            <p class="small hint-text">
+                                                VIA Apple Store (Consumer and Education Individuals) <br>
+                                                (800) MY-APPLE (800-692-7753)
+                                            </p>
+                                        </div>
+                                        <div class="col-md-3 text-right">
+                                            <p class="font-montserrat bold text-success m-r-20 fs-16">+0.94</p>
+                                            <p class="font-montserrat bold text-danger m-r-20 fs-16">-0.63</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END WIDGET -->
+                    </div>
+                </div>
+
+                <!-- START CONTAINER FLUID -->
+                <!-- START PANEL -->
+                <div class="panel panel-transparent m-t-20">
+                    <div class="panel-heading">
+                        <div class="panel-title heading_1">Company List</div>
+                        <div class="pull-right">
+
+                            <!--  <a   ui-sref="app.forms.elements"  class="btn btn-primary btn-cons">
+                                <i class="fa fa-plus"></i>
+                                Add Company</a>-->
+                            <button type="button" class="btn btn-primary btn-cons" title="Add User" data-toggle="modal" data-target="#myModal0">
+                                <i class="fa fa-plus"></i>
+                                Add Company
+                            </button>
+
+
+
+
+                        </div>
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="table-responsive table-responsive0">
+                            <table class="table table_space table-condensed table-detailed dataTable no-footer table  table-hover table-detailed" id="detailedTable" ui-jq="dataTable" ui-options="options">
+                                <thead>
+                                    <tr>
+                                        <th width="15%">logo</th>
+                                        <th>Company <br />Name</th>
+                                        <th>City</th>
+                                        <th>Total <br />Billing</th>
+                                        <th>Billing <br />This Month</th>
+                                        <th>AVG. Degree <br />of centrality</th>
+                                        <th width="15%">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td ng-click="expand($event)" class="v-align-middle semi-bold">
+                                            <p>
+                                                <img src="pages/img/Lobby.png" width="40" alt="#" />
+                                            </p>
+                                        </td>
+                                        <td class="v-align-middle"><p>Company1</p></td>
+                                        <td class="v-align-middle"><p>Abc 1</p></td>
+                                        <td class="v-align-middle"><p>$560</p></td>
+                                        <td class="v-align-middle"><p>$180</p></td>
+                                        <td class="v-align-middle"><p>0.87</p></td>
+                                        <td class="v-align-middle">
+                                            <div class="actionbtn">
+                                                <button class="btn btn-success" type="button" title="Edit User">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-danger" type="button" title="Remove User">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                                <button type="button" class="btn  btn-primary " title="Add User" data-toggle="modal" data-target="#myModal">
+                                                    <i class="fa fa-user-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td ng-click="expand($event)" class="v-align-middle semi-bold">
+                                            <p>
+                                                <img src="pages/img/Lobby.png" width="40" alt="#" />
+                                            </p>
+                                        </td>
+                                        <td class="v-align-middle"><p>Company2</p></td>
+                                        <td class="v-align-middle"><p>Abc</p></td>
+                                        <td class="v-align-middle"><p>$560</p></td>
+                                        <td class="v-align-middle"><p>$180</p></td>
+                                        <td class="v-align-middle"><p>0.87</p></td>
+                                        <td class="v-align-middle">
+                                            <div class="actionbtn">
+                                                <button class="btn btn-success" type="button" title="Edit User">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-danger" type="button" title="Remove User">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                                <button type="button" class="btn  btn-primary " title="Add User" data-toggle="modal" data-target="#myModal">
+                                                    <i class="fa fa-user-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td ng-click="expand($event)" class="v-align-middle semi-bold">
+                                            <p>
+                                                <img src="pages/img/Lobby.png" width="40" alt="#" />
+                                            </p>
+                                        </td>
+                                        <td class="v-align-middle"><p>Company3</p></td>
+                                        <td class="v-align-middle"><p>Abc3</p></td>
+                                        <td class="v-align-middle"><p>$560</p></td>
+                                        <td class="v-align-middle"><p>$180</p></td>
+                                        <td class="v-align-middle"><p>0.87</p></td>
+                                        <td class="v-align-middle">
+                                            <div class="actionbtn">
+                                                <button class="btn btn-success" type="button" title="Edit User">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-danger" type="button" title="Remove User">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                                <button type="button" class="btn  btn-primary " title="Add User" data-toggle="modal" data-target="#myModal">
+                                                    <i class="fa fa-user-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td ng-click="expand($event)" class="v-align-middle semi-bold">
+                                            <p>
+                                                <img src="pages/img/Lobby.png" width="40" alt="#" />
+                                            </p>
+                                        </td>
+                                        <td class="v-align-middle"><p>Company4</p></td>
+                                        <td class="v-align-middle"><p>Abc4</p></td>
+                                        <td class="v-align-middle"><p>$560</p></td>
+                                        <td class="v-align-middle"><p>$180</p></td>
+                                        <td class="v-align-middle"><p>0.87</p></td>
+                                        <td class="v-align-middle">
+                                            <div class="actionbtn">
+                                                <button class="btn btn-success" type="button" title="Edit User">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-danger" type="button" title="Remove User">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                                <button type="button" class="btn  btn-primary " title="Add User" data-toggle="modal" data-target="#myModal">
+                                                    <i class="fa fa-user-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td ng-click="expand($event)" class="v-align-middle semi-bold">
+                                            <p>
+                                                <img src="pages/img/Lobby.png" width="40" alt="#" />
+                                            </p>
+                                        </td>
+                                        <td class="v-align-middle"><p>Company5</p></td>
+                                        <td class="v-align-middle"><p>Abc5</p></td>
+                                        <td class="v-align-middle"><p>$560</p></td>
+                                        <td class="v-align-middle"><p>$180</p></td>
+                                        <td class="v-align-middle"><p>0.87</p></td>
+                                        <td class="v-align-middle">
+                                            <div class="actionbtn">
+                                                <button class="btn btn-success" type="button" title="Edit User">
+                                                    <i class="fa fa-pencil"></i>
+                                                </button>
+                                                <button class="btn btn-danger" type="button" title="Remove User">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                                <button type="button" class="btn  btn-primary " title="Add User" data-toggle="modal" data-target="#myModal">
+                                                    <i class="fa fa-user-plus"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- END PANEL -->
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header clearfix ">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                    <i class="pg-close fs-14"></i>
+                                </button>
+                                <h4 class="p-b-5"><span class="semi-bold">Add New User</span> </h4>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div pg-form-group class="form-group form-group-default">
+                                                <label>name</label>
+                                                <input id="appName" type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div pg-form-group class="form-group form-group-default">
+                                                <label>Email</label>
+                                                <input id="appName" type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div pg-form-group class="form-group form-group-default">
+                                                <label>Gender</label>
+                                                <select class="form-control">
+                                                    <option selected></option>
+                                                    <option>Male</option>
+                                                    <option>Female</option>
+                                                </select>
+                                                <!--    <input id="appPrice" type="text" class="form-control" placeholder="">-->
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div pg-form-group class="form-group form-group-default">
+                                                <label>Phone</label>
+                                                <input id="appNotes" type="text" class="form-control" placeholder="">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+
+                                            <label style=" font-weight bold;">Role</label>
+                                            <div class="checkbox_sect">
+
+
+                                                <div class="checkbox  checkbox-circle">
+                                                    <input type="checkbox" id="checkbox7" value="1" checked="checked">
+                                                    <label for="checkbox7">User</label>
+                                                </div>
+                                                <div class="checkbox  checkbox-circle">
+                                                    <input type="checkbox" id="checkbox8" value="1" checked="checked">
+                                                    <label for="checkbox8">Director</label>
+                                                </div>
+                                                <div class="checkbox  checkbox-circle">
+                                                    <input type="checkbox" id="checkbox9" value="1" checked="checked">
+                                                    <label for="checkbox9">HR</label>
+                                                </div>
+
+
+
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="add-app" type="button" class="btn btn-primary  btn-cons" ng-click="addApp()">Add</button>
+                                <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-cons "> Close</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                </div>
+
+                <!-- /.modal -->
+
+            </div>
+            <div class="tab-pane " id="tab-fillup2">
+                <div class="col-sm-3 pull-right pb20">
+                    <select class="form-control">
+                        <option selected>Singapore</option>
+                        <option>New York City</option>
+                        <option>Washington, D.C.</option>
+                        <option>San Francisco</option>
+                        <option>Los Angeles</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-8 panel no-border bg-success no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                                    <i class="fa fa-usd right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading top-left top-right">
+                                                    <div class="panel-title text-black hint-text">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Total Billing
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="panel-controls">
+                                                        <ul>
+                                                            <li>
+                                                                <a data-toggle="refresh" class="portlet-refresh text-black" ng-click="refresh()">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height ">
+                                            <div class="col-xs-height col-top relative">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="p-l-20">
+                                                            <h3 class="no-margin p-b-5 text-white">$12,000</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-9 panel no-border bg-primary no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                                    <i class="fa fa-file-text-o right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading  top-left top-right">
+                                                    <div class="panel-title text-black">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Total Listed  Restaurants
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="panel-controls">
+                                                        <ul>
+                                                            <li>
+                                                                <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="p-l-20 p-t-20">
+                                                    <h3 class="no-margin p-b-5 text-white">3,600</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-9 panel no-border widget-6 no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                                    <i class="fa fa-spoon right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading  top-left top-right">
+                                                    <div class="panel-title text-black">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Total Lunches
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="p-l-20 p-t-20">
+                                                    <h3 class="no-margin p-b-5 text-white">{{userkpi.totallunches}}</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-8 panel no-border bg-complete no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                                    <i class="fa fa-usd right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading top-left top-right">
+                                                    <div class="panel-title text-black hint-text">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Billing This Month
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height ">
+                                            <div class="col-xs-height col-top relative">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <div class="p-l-20">
+                                                            <h3 class="no-margin p-b-5 text-white">$ 5,600 <i class="fa fa-sort-desc"></i> </h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-9 panel no-border btn-info no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                                    <i class="fa fa-bank right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading  top-left top-right">
+                                                    <div class="panel-title text-black">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Total Participating Restaurants
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="panel-controls">
+                                                        <ul>
+                                                            <li>
+                                                                <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="p-l-20 p-t-20">
+                                                    <span class="small hint-text whit-color all-caps">This Week</span>
+                                                    <h3 class="no-margin p-b-5 text-white">580 <i class="fa fa-sort-up"></i></h3>
+                                                    <div class="clearfix"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                            <div class="col-md-4 m-b-10">
+                                <!-- START WIDGET -->
+                                <div class="widget-9 panel no-border  bg-success no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                                    <i class="fa fa-cutlery right_icon"></i>
+                                    <div class="container-xs-height full-height">
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="panel-heading  top-left top-right">
+                                                    <div class="panel-title text-black">
+                                                        <span class="font-montserrat fs-14 all-caps">
+                                                            Lunches
+                                                            <i class="fa fa-chevron-right"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div class="panel-controls">
+                                                        <ul>
+                                                            <li>
+                                                                <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row-xs-height">
+                                            <div class="col-xs-height col-top">
+                                                <div class="p-l-20 p-t-20">
+                                                    <span class="small hint-text whit-color all-caps">This Week</span>
+                                                    <h3 class="no-margin p-b-5 text-white">52 <i class="fa fa-sort-up"></i></h3>
+                                                    <div class="clearfix"></div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END WIDGET -->
+                            </div>
+                        </div>
+
+                        <!-- START PANEL -->
+                        <div class="panel panel-transparent m-t-20">
+                            <div class="panel-heading">
+                                <div class="panel-title heading_1">Restaurant List</div>
+                                <div class="pull-right">
+
+                                    <a ui-sref="#" class="btn btn-primary btn-cons">
+                                        <i class="fa fa-plus"></i>
+                                        Add Restaurant
+                                    </a>
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive table-responsive0">
+                                    <table class="table table_space table-condensed table-detailed dataTable no-footer table  table-hover table-detailed" 
+                                           id="detailedTable" ui-jq="dataTable" ui-options="options">
+                                        <thead>
+                                            <tr>
+                                                <th>Code</th>
+                                                <th>Restaurant<br> Name</th>
+                                                <th>Pin Code</th>
+                                                <th>Discounts </th>
+                                                <th>Avg. Ratings </th>
+                                                <th>Customer <br> Generated</th>
+                                                <th>Total Lunches </th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="restaurant in restaurants">
+                                                <td ng-click="expand2($event)" class="v-align-middle"><p>01</p></td>
+                                                <td class="v-align-middle"><p>{{restaurant.name}}</p></td>
+                                                <td class="v-align-middle"><p>{{restaurant.zip}}</p></td>
+                                                <td class="v-align-middle">
+                                                    <input type="checkbox" class="js-switch" ng-model="checkboxModel1" ui-switch="{color: '#10cfbd',secondaryColor:'#bae7de'}" />
+                                               </td>
+                                                <td class="v-align-middle">
+                                                    <ul class="rating_sect rating_sect0">
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+
+                                                        <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+
+
+                                                    </ul>
+                                                </td>
+                                                <td><p>332</p></td>
+                                                <td><p>33</p></td>
+
+                                                <td class="v-align-middle">
+                                                    <div class="actionbtn">
+                                                        <button class="btn btn-success" type="button" title="Edit User">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary" title="Pause User">
+                                                            <i class="fa fa-pause"></i>
+                                                        </button>
+                                                        <button class="btn btn-danger" type="button" title="Remove User">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+
+                                                <td ng-click="expand2($event)" class="v-align-middle"><p>01</p></td>
+                                                <td class="v-align-middle"><p>harris at work</p></td>
+                                                <td class="v-align-middle"><p>02727</p></td>
+                                                <td class="v-align-middle">
+
+
+                                                    <input type="checkbox" class="js-switch" ng-model="checkboxModel1" ui-switch="{color: '#10cfbd',secondaryColor:'#bae7de'}" />
+
+                                                    <!-- <button data-toggle="button" class="btn btn-complete active" type="button" aria-pressed="false">Discounts</button> -->
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <ul class="rating_sect rating_sect0">
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+
+                                                        <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+
+
+                                                    </ul>
+                                                </td>
+                                                <td><p>332</p></td>
+                                                <td><p>33</p></td>
+
+                                                <td class="v-align-middle">
+                                                    <div class="actionbtn">
+                                                        <button class="btn btn-success" type="button" title="Edit User">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary" title="Pause User">
+                                                            <i class="fa fa-pause"></i>
+                                                        </button>
+                                                        <button class="btn btn-danger" type="button" title="Remove User">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td ng-click="expand2($event)" class="v-align-middle"><p>01</p></td>
+                                                <td class="v-align-middle"><p>harris at work1</p></td>
+                                                <td class="v-align-middle"><p>02727</p></td>
+                                                <td class="v-align-middle">
+                                                    <input type="checkbox" class="js-switch" ng-model="checkboxModel1" ui-switch="{color: '#10cfbd',secondaryColor:'#bae7de'}" />
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <ul class="rating_sect rating_sect0">
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+
+                                                        <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+
+
+                                                    </ul>
+                                                </td>
+                                                <td><p>332</p></td>
+                                                <td><p>33</p></td>
+
+                                                <td class="v-align-middle">
+                                                    <div class="actionbtn">
+                                                        <button class="btn btn-success" type="button" title="Edit User">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary" title="Pause User">
+                                                            <i class="fa fa-pause"></i>
+                                                        </button>
+                                                        <button class="btn btn-danger" type="button" title="Remove User">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td ng-click="expand3($event)" class="v-align-middle"><p>02</p></td>
+                                                <td class="v-align-middle"><p>harris at work 2</p></td>
+                                                <td class="v-align-middle"><p>02727</p></td>
+                                                <td class="v-align-middle">
+                                                    <input type="checkbox" class="js-switch" ng-model="checkboxModel3" ui-switch="{color: '#10cfbd',secondaryColor:'#bae7de'}" />
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <ul class="rating_sect rating_sect0">
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+
+                                                        <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+
+
+                                                    </ul>
+                                                </td>
+                                                <td><p>332</p></td>
+                                                <td><p>33</p></td>
+
+                                                <td class="v-align-middle">
+                                                    <div class="actionbtn">
+                                                        <button class="btn btn-success" type="button" title="Edit User">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary" title="Pause User">
+                                                            <i class="fa fa-pause"></i>
+                                                        </button>
+                                                        <button class="btn btn-danger" type="button" title="Remove User">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <td ng-click="expand3($event)" class="v-align-middle"><p>03</p></td>
+                                                <td class="v-align-middle"><p>harris at work 3</p></td>
+                                                <td class="v-align-middle"><p>02727</p></td>
+                                                <td class="v-align-middle">
+                                                    <input type="checkbox" class="js-switch" ng-model="checkboxModel3" ui-switch="{color: '#10cfbd',secondaryColor:'#bae7de'}" />
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <ul class="rating_sect rating_sect0">
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+
+                                                        <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+
+
+                                                    </ul>
+                                                </td>
+                                                <td><p>332</p></td>
+                                                <td><p>33</p></td>
+
+                                                <td class="v-align-middle">
+                                                    <div class="actionbtn">
+                                                        <button class="btn btn-success" type="button" title="Edit User">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary" title="Pause User">
+                                                            <i class="fa fa-pause"></i>
+                                                        </button>
+                                                        <button class="btn btn-danger" type="button" title="Remove User">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+                                            <tr class="disabled_0">
+
+                                                <td ng-click="expand3($event)" class="v-align-middle"><p>04</p></td>
+                                                <td class="v-align-middle"><p>harris at work 04</p></td>
+                                                <td class="v-align-middle"><p>02727</p></td>
+                                                <td class="v-align-middle">
+                                                    <input type="checkbox" class="js-switch" ng-model="checkboxModel3" ui-switch="{color: '#10cfbd',secondaryColor:'#bae7de'}" />
+                                                </td>
+                                                <td class="v-align-middle">
+                                                    <ul class="rating_sect rating_sect0">
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                                                        <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+
+                                                        <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+
+
+                                                    </ul>
+                                                </td>
+                                                <td><p>332</p></td>
+                                                <td><p>33</p></td>
+
+                                                <td class="v-align-middle">
+                                                    <div class="actionbtn">
+                                                        <button class="btn btn-success" type="button" title="Edit User">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </button>
+                                                        <button type="button" class="btn btn-primary" title="Active User">
+                                                            <i class="fa fa-play"></i>
+                                                        </button>
+                                                        <button class="btn btn-danger" type="button" title="Remove User">
+                                                            <i class="fa fa-trash-o"></i>
+                                                        </button>
+
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <!-- END PANEL -->
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header clearfix ">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                            <i class="pg-close fs-14"></i>
+                                        </button>
+                                        <h4 class="p-b-5"><span class="semi-bold">Details</h4>
+                                    </div>
+                                    <div class="modal-body readon">
+                                        <form role="form">
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Restaurant Name</label>
+                                                        <div>
+                                                            <input id="appName" readonly type="text" class="form-control" placeholder="Harry's at Shenton Way">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Restaurant code</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="02154" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Address</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="Address" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Zip</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="87878" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Price</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="500" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Phone</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="9988665522" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Halal</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="false" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Veg</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="true" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Cuisine</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="Cuisine" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
+                                                        <label>Total</label>
+                                                        <div>
+                                                            <input id="appName" type="text" class="form-control" placeholder="500" readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                                        </form>
+
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-cons "> Close</button>
+                                    </div>
+                                </div>
+                                <!-- /.modal-content -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

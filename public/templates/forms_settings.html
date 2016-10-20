@@ -1,0 +1,594 @@
+﻿<link href="../pages/css/user-pages.css" rel="stylesheet" />
+
+<div class="panel panel-transparent ">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-tabs-fillup" role="tablist" ng-show="!active_user.isRegistered">
+        
+        <li role="presentation1" ng-class="{active: ActiveTab == 'EditProfile'}"><a href="/app/forms/settings/#tab1a" aria-controls=" " role="tab" data-toggle="tab"><span>Edit Profile</span></a></li>
+
+        <li role="presentation1" ng-class="{active: ActiveTab == 'Cuisine'}">
+        <a href="/app/forms/settings/#tab2a" aria-controls="home" role="tab" data-toggle="tab" ng-show="IsCuisineActive"><span>Cuisine</span></a>
+        <a  class="disabled" ng-show="!IsCuisineActive"><span>Cuisine</span></a>
+        </li>
+        <li role="presentation1" ng-class="{active: ActiveTab == 'People'}">
+        <a href="/app/forms/settings/#tab3a" aria-controls="home" role="tab" data-toggle="tab" ng-show="IsPeopleActive"><span>People</span></a>
+            <a class="disabled"  ng-show="!IsPeopleActive"><span>People</span></a>
+        </li>
+
+
+    </ul>
+    <ul class="nav nav-tabs nav-tabs-fillup" role="tablist" ng-show="active_user.isRegistered">
+
+        <li role="presentation1" class="active"><a href="/app/forms/settings/#tab1a" aria-controls=" " role="tab" data-toggle="tab"><span>Edit Profile</span></a></li>
+
+        <li role="presentation1"><a href="/app/forms/settings/#tab2a" aria-controls="home" role="tab" data-toggle="tab"><span>Cuisine</span></a></li>
+        <li role="presentation1"><a href="/app/forms/settings/#tab3a" aria-controls="home" role="tab" data-toggle="tab" ><span>People</span></a></li>
+
+
+    </ul>
+
+
+    <div class="tab-content">
+        <span ng-show="!active_user.isRegistered">Please complete all the 3 sign up steps</span>
+        <div class="tab-pane" ng-class="{active: ActiveTab == 'EditProfile'}" id="tab1a">
+            <div class="step_one">
+                <div class="simple-card">
+                    <div class="header01">
+                        <h4><i class="fa fa-user"></i> Edit Profile </h4>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="block_list pt0">
+
+
+
+                            <div class="w100p ng-pristine ng-valid ng-scope ng-touched" tabindex="0" aria-invalid="false">
+
+
+                                <div class="card panel panel-default w100p" style="min-height: 331px; background-color:{{active_user.CardColorValue}}">
+                                    <div class="panel-body card-body pb0 pt15">
+                                        <div class="file-upload file-upload_sect" id="user_card">
+                                            
+                                            <input type="file" class="cloudinary_fileupload hide">
+                                            <button onclick="fileUpload(); ">
+                                                <img ng-src="{{active_user.picture}}" class='img-responsive user-image' style="width:100px;height:100px;" />
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+
+                                    <div class="info_sect info_sect01">
+                                        <h4 class="ng-binding mt0 mb0"><b>{{ active_user.firstname }} {{ active_user.lastname }}</b></h4>
+                                        <h6 class="ng-binding mb3">{{ active_user.title }} </h6>
+                                        <!--<h6 class="ng-binding">{{active_user.email }}</h6>-->
+
+                                        <h6 class="ng-binding" ng-show="active_user.ShowMobileNum">
+                                        {{ active_user.mobilephone }}</h6>
+                                        <h6 class="nb-binding" ng-show="!active_user.ShowMobileNum">
+                                            {{ active_user.phone }}
+                                        </h6>
+
+                                    </div>
+                                    <div class="info_sect_totel mt5">
+                                        <div class="col-sm-4">
+                                            <i class="fa fa-cutlery"></i>
+                                            <span>{{active_user.lunchCount}}</span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <i class="fa fa-users"></i>
+                                            <span>43</span>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <i class="fa fa-share-alt"></i>
+                                            <span>{{DegreeofConnectedness|number:2}} </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="info_sect_buttons">
+                                        <a class="email_button" href="mailto:">Email</a>
+
+                                        <a class="Linkedin_button" target="_blank" href="{{active_user.linkedin}}" ng-show="active_user.showlinkedBtn">Linkedin</a>
+                                        <a class="Linkedin_button not-active" href="#" ng-show="!active_user.showlinkedBtn" disabled="disabled">Linkedin</a>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div class="color_opt">
+                                <h5 class="semi-bold mt5 pt0">
+                                    Choose your card color
+                                </h5>
+                                <ul class="color_opt_box">
+                                   
+                                    <li id="{{prop.Name}}" ng-class="navClass()" ng-repeat="(key, prop) in CardColors" >
+                                        <a href="#" style="background-color: {{prop.Value}};" ng-click="SetCardColor(prop.Name,prop.Value)"></a>
+                                    </li>
+                                    <!--<li class="active"><a href="#" style="background-color: #dedede;"></a></li>
+                                    <li><a href="#" style="background-color: rgba(16, 207, 189, 0.29);"></a></li>
+                                    <li><a href="#" style="background-color: #3E97D4;"></a></li>
+                                    <li><a href="#" style=" background-color rgba(62, 151, 212, 0.33);"></a></li>
+                                    <li><a href="#" style="background-color: rgba(62, 138, 177, 0.36);"></a></li>
+                                    <li><a href="#" style="background-color: rgba(138, 125, 190, 0.25);"></a></li>-->
+
+
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-9 right_col">
+                        <!-- START PANEL -->
+
+
+                        <h5 class="mt0">Profile </h5>
+
+
+
+                        <form class="form-group-attached" role="form" id="settingform" name="settingform" ng-class="{'submitted': submitted}" ng-submit="settingform.$valid && updateUser(active_user)">
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div pg-form-group class="form-group form-group-default required ">
+                                        <label>First Name</label>
+                                        <input type="text" placeholder="First Name" ng-model="active_user.firstname" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div pg-form-group class="form-group form-group-default required ">
+                                        <label>Last Name</label>
+                                        <input type="text" placeholder="Last Name" ng-model="active_user.lastname" class="form-control" required>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div pg-form-group class="form-group form-group-default required ">
+                                        <label>Email</label>
+                                        <input type="text" placeholder="" ng-model="active_user.email" class="form-control" disabled required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div pg-form-group class="form-group form-group-default required ">
+                                        <label>Position</label>
+                                        <input type="text" ng-model="active_user.title" class="form-control" disabled required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div pg-form-group class="form-group form-group-default required ">
+                                        <label>Phone</label>
+                                        <input type="text" ng-model="active_user.phone" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div pg-form-group class="form-group form-group-default required ">
+                                        <label>Mobile</label>
+                                        <input type="text" class="form-control" ng-model="active_user.mobilephone" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-sm-12">
+                                    <div pg-form-group class="form-group form-group-default required bm1">
+                                        <label>Linkedin</label>
+                                        <input type="text" class="form-control" ng-model="active_user.linkedin" required>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <h5>Security</h5>
+
+
+
+
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div pg-form-group class="form-group form-group-default required">
+                                        <label>User Name</label>
+                                        <input type="text" placeholder="User Name" ng-model="active_user.email" disabled class="form-control">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div pg-form-group class="form-group form-group-default ">
+                                        <label>Old Password</label>
+                                        <input type="password" ng-model="active_user.password" class="form-control" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div pg-form-group class="form-group form-group-default  ">
+                                        <label>New Password</label>
+                                        <input type="password" class="form-control" name="newpassword" ng-model="active_user.newpassword">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div pg-form-group class="form-group form-group-default bm1">
+                                        <label>Retype New Password</label>
+                                        <input type="password" class="form-control" ng-model="active_user.confirmpassword" name="confirmpassword" data-password-verify="active_user.newpassword">
+                                        <span ng-show="submitted && settingform.confirmpassword.$error.passwordVerify">Confirm Password not matched with Password</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <h5>Notifications</h5>
+
+
+
+                            <div class="row">
+                                <div class="notifications_col">
+                                    <div class="w100p pull-left">
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <div class="contant_info">
+                                                    Let Eva Send me email everyday &nbsp;&nbsp; 
+                                                    <input type="checkbox"   class="js-switch"  ng-model="active_user.isSendNotification" ui-switch="{color: '#10cfbd'}"/>
+                                                    <!--<input type="checkbox" class="js-switch" ng-show="!active_user.isSendNotification" ng-model="active_user.isSendNotificationFalse" ui-switch="{color: '#10cfbd'}" />-->
+                                                    <!--<input type="checkbox" class="js-switch" ng-show="!active_user.isSendNotification" ui-switch="{color: '#10cfbd'}" />-->
+                                                </div>
+
+
+
+
+                                            </div>
+
+                                            <div class="col-sm-7">
+                                                <div class="contant_info pt5">
+                                                    Email me on these days only &nbsp;&nbsp;
+
+
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-complete " disabled>
+                                                            <input type="checkbox" disabled checked=""> S
+                                                        </label>
+                                                        <label ng-repeat="day in weakDays" id="lbl_{{day}}"   class="btn btn-complete" ng-click="daysSelection(day);">
+                                                            <input type="checkbox"
+                                                                   name="active_user.days"
+                                                                   value="{{day}}"
+                                                                   ng-checked="active_user.days.indexOf(day) > -1"
+                                                                   ng-click="daysSelection(day);"> 
+                                                           {{day | cut:true}}
+                                                        </label>                                                                                                               
+                                                        <label class="btn btn-complete" disabled>
+                                                            <input type="checkbox" disabled> S
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="row">
+                                                <div class="col-sm-12 pt10">
+                                                    <div class="contant_info"> Vacation Period  &nbsp;&nbsp;  
+                                                    <input type="checkbox" class="js-switch"   ng-model="active_user.isVocationPeriod" ui-switch="{color: '#10cfbd'}" /></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="row mt10">
+                                        <div class="w100p" ng-show="active_user.isVocationPeriod">
+                                            <div class="col-sm-6" style="padding-right:0px;">
+                                                <div pg-form-group class="form-group form-group-default input-group ">
+                                                    <label>From</label>
+                                                    <input type="text" class="form-control" ng-model="active_user.vocationFrom"  placeholder="Pick a date" id="datepicker-component2" ui-jq="datepicker">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </div>
+                                                <!-- <div pg-form-group class="form-group form-group-default">
+                                                  <label>From</label>
+                                                  <input type=""  class="form-control">
+                                                </div>-->
+                                            </div>
+                                            <div class="col-sm-6" style="padding-left:0px;">
+                                                <div pg-form-group class="form-group form-group-default input-group">
+                                                    <label>To</label>
+                                                    <input type="text" class="form-control" ng-model="active_user.vocationTo" placeholder="Pick a date" id="datepicker-component2" ui-jq="datepicker" 
+                                                           ng-change='checkErr(active_user.vocationFrom,active_user.vocationTo)'>
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </span>
+                                                </div>
+                                                <span style="color:red;">{{errMessage}}</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-sm-6 mt10">
+                                        <label class="label_sect"><input type="checkbox" required="required"><a href="javascript:;"> I agree to terms and privacy policy</a> </label>
+                                    </div>
+
+                                    <!--<div class="col-sm-6 mt10">
+                                    <a href="#" class="label_sect label_sect0"> Help? contacts sport </a>
+                                                      </div> -->
+                                </div>
+
+                                <div class="row ">
+                                    <div class="col-sm-12  p-t-20">
+
+                                        <button type="submit" class="btn btn-primary btn-cons m-b-10" id="btnSubmit">
+                                            <span class="bold" ng-show="active_user.isRegistered">Update</span>
+                                            <span class="bold" ng-show="!active_user.isRegistered">Next</span>
+                                        </button>
+
+                                       
+                                        <!-- Indicates a successful or positive action -->
+                                        <!--  <button type="button" class="btn btn-default btn-cons m-b-10"><i class="fa fa-times" aria-hidden="true"></i>
+                                        <span class="bold">Cancel</span>
+                                                            </button>-->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+
+                        <!-- END PANEL -->
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+
+        <div class="tab-pane" ng-class="{active: ActiveTab == 'Cuisine'}" id="tab2a">
+            <div class="step_one">
+                <div class="simple-card">
+                    <div class="header01">
+                        <h4><i class="fa fa-cutlery"></i> Cuisine </h4>
+                    </div>
+                </div>
+
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+                        <span class="pull-left pt5">Halal</span>&nbsp;&nbsp; <input type="checkbox" class="js-switch" ng-model='active_user.halal' ui-switch="{color: '#10cfbd'}" ng-change="UpdateCuisine(1)" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <span class=" pt5"> Vegeterian: </span>&nbsp;&nbsp;<input type="checkbox" class="js-switch" ng-model='active_user.veg' ui-switch="{color: '#10cfbd'}" ng-change="UpdateCuisine(1)"/>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-sm-3 mt20">
+                        <span>Cost:</span>
+
+                        <div class="bg-danger m-b-10 mt15" id="slider-step" ui-jq="noUiSlider" ui-options="{start: [20, 80],step: 10,connect: true,range: {'min': 0,'max': 100}}"></div> 
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="row ">
+                    <!--<ul class="tags_list mt30">
+
+                        <li>GLUTEN FREE <a href="javascript:;"><i class="fa fa-close"></i></a></li>
+                        <li>TRUCKIN' AWESOME <a href="javascript:;"><i class="fa fa-close"></i></a></li>
+                        <li>GLUTEN FREE <a href="javascript:;"><i class="fa fa-close"></i></a></li>
+                        <li>TRUCKIN' AWESOME <a href="javascript:;"><i class="fa fa-close"></i></a></li>
+
+                    </ul>-->
+                  
+                        <md-chips ng-model="active_user.cuisine" class="tags_list mt30"></md-chips>
+                                         <div class="col-sm-12 text-center mt20">
+                            <button class="btn btn-primary btn-cons m-b-10" type="button" ng-click="SelectAllCuisine()">
+                                <span class="bold">Select All </span>
+                            </button>
+                        </div>
+                        <div class="list_box_sect mt10">
+                            <div class="col-sm-3" ng-repeat='cuisine in cuisines'>
+                                <div class="list_box_sect_col" ng-model='active_user' ng-click='toggle(cuisine, active_user.cuisine)'>
+                                    <a href="#" class="fa fa-plus add_button_col" ng-show='existsCuisine(cuisine, active_user.cuisine)'></a>
+                                    <img src="assets/images/cuisines/{{cuisine.toLowerCase()}}.jpg" class="img-responsive cuisine-photo" style="height:150px; width: 100%;">
+                                    <div class="list_box_sect_col_info">
+                                        <h5>{{cuisine}}</h5>
+                                        <h6>12 PLACES</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+
+                        </div>
+</div>
+                <div class="row" ng-show="!active_user.isRegistered">
+                    <button type="submit" class="btn btn-primary btn-cons m-b-10" id="btnSubmitCuisine" ng-click="UpdateCuisine(0);">                       
+                        <span class="bold" ng-show="!active_user.isRegistered">Next</span>
+                    </button>
+                </div>
+               
+            </div>
+        </div>
+        <div class="tab-pane" ng-class="{active: ActiveTab == 'People'}" id="tab3a">
+            <div class="step_one">
+                <div class="simple-card">
+                    <div class="header01">
+                        <h4><i class="fa fa-users"></i> People </h4>
+                    </div>
+                </div>
+
+                <div class="custon_design_tab">
+                    <ul class="nav" role="tablist">
+                        <li role="presentation" class="active"><a href="/app/forms/settings/#tab01" aria-controls="home" role="tab" data-toggle="tab" ng-click="FilteredUser('active')">Active <span>{{active_user.active}}</span></a></li>
+
+                        <li role="presentation" class=""><a href="/app/forms/settings/#tab02" aria-controls="home" role="tab" data-toggle="tab" ng-click="FilteredUser('known')">Known <span>{{active_user.known.length}}</span></a></li>
+
+                        <li role="presentation" class=""><a href="/app/forms/settings/#tab03" aria-controls="home" role="tab" data-toggle="tab" ng-click="FilteredUser('unknown')">Unknown <span>{{active_user.unknown}}</span></a></li>
+                        <li role="presentation" class=""><a href="/app/forms/settings/#tab04" aria-controls="home" role="tab" data-toggle="tab" ng-click="FilteredUser('blocked')">Blocked <span>{{active_user.blocked.length}}</span></a></li>
+
+
+                    </ul>
+                  
+                    <div class="ser_box">
+                        <div class="col-sm-3">
+                            <form id="frmSearchPeople" ng-submit="SearchUser();">
+                                <div class="ser_box_col">
+                                    <i class="fa fa-search"></i>
+                                    <input id="exampleInputAmount" ng-model="searchText" type="search" class="form-control">
+                                </div>
+                            </form>
+                           
+                        </div>
+                        <div class="col-sm-9">
+                            <ul class="list_line">
+                                <li id="li_{{letter}}" ng-repeat="letter in letters" ng-click="filerUser(letter,'')"><a href="javascript:;">{{letter}}</a></li>
+                               
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="tab01">
+                          
+
+                            <div class="block_list mt15">
+
+                               
+
+                                <div ng-repeat="usr in filteredUsers | filter:searchText" ng-include="getIncludeFile()">
+
+                                </div>
+
+                            
+
+
+                                <div class="col-sm-12">
+
+                                    <div class="dataTables_wrapper ">
+                                        <div class="dataTables_paginate paging_simple_numbers" data-pagination="" data-num-pages="currentNumberPage"
+                                             data-current-page="currentPage" data-max-size="maxSize"
+                                             data-boundary-links="true"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='simple-card'>
+
+                                <!--<md-tabs md-border-bottom md-autoselect md-dynamic-height md-border-bottom md-no-ink style='min-height: 400px;'>
+                                    <md-tab ng-repeat="letter in letters" label="{{letter}}">
+                                        <div class='row'>
+                                            <div class='col-sm-4' ng-repeat="user in usersAlpha[letter]" ng-model='user'>
+                                                <br>
+
+                                                <div class='card panel panel-default' style='min-height: 400px;'>
+                                                    <div class='panel-body card-body' style='padding: 20px;'>
+                                                        <button class='btn btn-info user-btn' ng-model='user' ng-click='addToKnown(user._id)'>
+                                                            <span ng-class='isKnown(user._id) ? "icon-FavFill selected" : "icon-FavFill"' />
+                                                        </button>
+                                                        <button class='btn btn-info pull-right user-btn' ng-model='user' ng-click='addToBlocked(user._id)'>
+                                                            <span ng-class='isBlocked(user._id) ? "icon-CancelFill selected" : "icon-CancelFill"' />
+                                                        </button>
+                                                        <img ng-src="{{user.picture}}" class='img-responsive user-image'> </img>
+
+                                                        <hr style='margin:20px' />
+
+                                                        <h4 style='margin-bottom:4px'>{{ user.name }}</h4>
+                                                        <h6>{{ user.title }}</h6>
+                                                        <h6>{{ user.email }}</h6>
+                                                    </div>
+
+
+                                                   
+
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </md-tab>
+                                </md-tabs>-->
+                                <div class="row" ng-show="!active_user.isRegistered">
+                                    <button type="submit" class="btn btn-primary btn-cons m-b-10" id="btnSubmitCuisine" ng-click="UpdateCuisine(2);">
+                                        <span class="bold" ng-show="!active_user.isRegistered">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                           
+                        </div>
+                        
+                       
+                        
+                    </div>
+                </div>
+
+
+            
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  
+$(document).ready(function(){
+
+var element = angular.element($('#user_card'));
+var controller = element.controller();
+var scope = element.scope();
+
+
+//$('.file-upload').append(
+//  $.cloudinary.unsigned_upload_tag("lunchedin_user",
+//      { cloud_name: 'hzif3kbk7' }).bind('cloudinarydone', function(e, data) {
+//          debugger;
+//        scope.$apply(function(){
+//           scope.updateUserPicture(data.result.secure_url);
+//        });
+
+//      }));
+    //})
+$('.cloudinary_fileupload').append(
+$.cloudinary.unsigned_upload_tag("lunchedin_user",
+  { cloud_name: 'hzif3kbk7' }).bind('cloudinarydone', function (e, data) {
+      //debugger;
+      scope.$apply(function () {
+          scope.updateUserPicture(data.result.secure_url);
+      });
+
+  }));
+})
+    //app = angular.module('app', ['ngMaterial', 'ngSanitize']);
+function fileUpload() { 
+    document.getElementsByClassName("cloudinary_fileupload")[1].click();   
+}
+</script>
+
+
+  

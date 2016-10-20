@@ -1,0 +1,112 @@
+<!-- START JUMBOTRON -->
+
+<div class="jumbotron" data-pages="parallax">
+  <div class="container-fluid container-fixed-lg sm-p-l-20 sm-p-r-20">
+    <div class="inner">
+      <!-- START BREADCRUMB -->
+      <ul class="breadcrumb">
+        <li>
+          <a href="">Forms</a>
+        </li>
+        <li>
+          <a href="" class="active">Form Elements</a>
+        </li>
+      </ul>
+      <!-- END BREADCRUMB -->
+      
+    </div>
+  </div>
+</div>
+<!-- END JUMBOTRON -->
+<!-- START CONTAINER FLUID -->
+<div class="container-fluid container-fixed-lg">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- START PANEL -->
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="panel-title"> Add Company</div>
+        </div>
+        <div class="panel-body">
+          <h5>
+          </h5>
+          <form class="" role="form">
+            <div pg-form-group class="form-group form-group-default required ">
+              <label>Company Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div pg-form-group class="form-group form-group-default form-group-default-select required">
+                  <label class="">Country</label>
+                  <ui-select ng-model="person.selected" theme="bootstrap">
+                    <ui-select-match placeholder="Select or search a person in the list...">{{$select.selected.name}}</ui-select-match>
+                    <ui-select-choices group-by="'country'" repeat="item in people | filter: $select.search">
+                      <span ng-bind-html="trustAsHtml((item.name | highlight: $select.search))"></span>
+                      <small ng-bind-html="trustAsHtml((item.email | highlight: $select.search))"></small>
+                    </ui-select-choices>
+                  </ui-select>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div pg-form-group class="form-group form-group-default form-group-default-select required">
+                  <label class="">City</label>
+                  <ui-select ng-model="city.selected" theme="bootstrap">
+                    <ui-select-match placeholder="Select or search a person in the list...">{{$select.selected.name}}</ui-select-match>
+                    <ui-select-choices group-by="'country'" repeat="item in people | filter: $select.search">
+                      <span ng-bind-html="trustAsHtml((item.name | highlight: $select.search))"></span>
+                      <small ng-bind-html="trustAsHtml((item.email | highlight: $select.search))"></small>
+                    </ui-select-choices>
+                  </ui-select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div pg-form-group class="form-group form-group-default required">
+                  <label>Branch Name</label>
+                  <input type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div pg-form-group class="form-group form-group-default">
+                  <label>Reg. Date</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div pg-form-group class="form-group form-group-default required">
+                  <label>logo</label>
+                  <div class="upload">
+                    <input type="file" id="myFile" class="form-control" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+             <div class="row">
+              <div class="col-sm-12  p-t-20">
+            
+               <button type="button" class="btn btn-primary btn-cons m-b-10"><i class="pg-form"></i> <span class="bold">Submit</span>
+                    </button>
+                    <!-- Indicates a successful or positive action -->
+                    <button type="button" class="btn btn-default btn-cons m-b-10"><i class="fa fa-times" aria-hidden="true"></i>
+<span class="bold">Cancel</span>
+                    </button>
+            
+            </div>
+            </div>
+            
+            
+          </form>
+        </div>
+      </div>
+      <!-- END PANEL -->
+    </div>
+  </div>
+</div>
+<!-- END CONTAINER FLUID -->
+<!-- START CONTAINER FLUID -->

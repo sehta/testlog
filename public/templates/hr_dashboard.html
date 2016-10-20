@@ -1,0 +1,132 @@
+  <div class='container-fluid user-dashboard-body'>
+
+    <div class='row'>
+
+      <!---borders-->
+      <div class='col-sm-1 col-xs-1'></div>
+      <div>
+          <h3>Lucky Lunch</h3>
+          <div>
+
+          </div>
+          <div>
+
+          </div>
+      </div>
+
+      <!---mainsection-->
+      <div class='col-sm-10 col-xs-10 dashboard-content'>
+      	<div class='row'>
+            <img class='logo' src='../assets/images/logo.png'/>
+        </div>
+
+        <div class='jumbotron simple-card' id='dashboard-header'>
+            <div class='row'>
+                <div class="headerwidget">
+                    <h3>Total Users </h3>
+                    <span>{{companyusers.length}}</span>
+                </div>
+                <div class="headerwidget">
+                    <h3>Total Lunches </h3>
+                    <span>{{userkpi.totallunches}}</span>
+                </div>
+                <div class="headerwidget">
+                    <h3>Lunches This Week</h3>
+                    <span>{{userkpi.lunchesweek}}</span>
+                    <span></span>
+                </div>
+                <div class="headerwidget">
+                    <h3>Active Users This Week</h3>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="headerwidget">
+                    <h3>Avg. Degree Centrality</h3>
+                    <span>{{userkpi.totalcompanyknown}}</span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+			<md-tabs  md-dynamic-height md-border-bottom md-center-tabs md-stretch-tabs>
+			    <md-tab label="Users">
+					<md-content class="md-padding">
+					 	<!--<ng-include src="'templates/lunchMates_admin.html'"> </ng-include>-->
+                        <div class='row'>
+                            <md-input-container class='col-sm-3'>
+                                <label>Name</label>
+                                <input ng-model="newuser.name">
+                            </md-input-container>
+                            <md-input-container class='col-sm-3'>
+                                <label>Email</label>
+                                <input ng-model="newuser.email">
+                            </md-input-container>
+                            <md-input-container class='col-sm-3'>
+                                <label>Gender</label>
+                                <input ng-model="newuser.gender">
+                            </md-input-container>
+                            <button class='btn btn-primary' ng-click='addUser()'>Invite User</button>
+                        </div>
+                        <table datatable="ng" dt-options="dtOptions1" class="tbluser" dt-column-defs="dtColumnDefs1">
+                            <thead>
+                                <tr>
+                                   
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Role</th>
+                                    <th>Total Lunches</th>
+                                    <th>Degree of Connected ness</th>
+                                    <th>Last Lunch</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="usr in companyusers">
+                                  
+                                    <td>{{ usr.name }}</td>
+                                    <td>{{ usr.email }}</td>
+                                    <td>{{ usr.phone }}</td>
+                                    <td>
+                                        <select>
+                                            <option ng-repeat="ur in usr.role"
+                                                    value="{{ur}}">
+                                                {{ur}}
+                                            </option>
+                                        </select>
+                                    </td>
+                                    <td>{{ usr.lunchcount }}</td>
+                                   <td>{{ usr.knownpeople }}</td>
+                                    <td>{{ usr.lastlunch }}</td>
+                                    <td>
+                                        <input type="button" class="btn btn-info" value="Edit" ng-click="getUser($event,$index)" />&nbsp;&nbsp;<input type="button" class="btn btn-danger" value="Delete" ng-click="deleteUser($event,$index)" />
+                                        <input ng-show="usr.isPause" type="button" class="btn btn-info" value="Active" ng-click="updateStatus($event,$index,false)" />
+                                        <input ng-show="!usr.isPause" type="button" class="btn btn-danger" value="Pause" ng-click="updateStatus($event,$index,true)" />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+					</md-content>
+				</md-tab>
+			    <!--<md-tab label="Matches">
+			    	<md-content class="md-padding">
+						<ng-include src="'templates/lunches_admin.html'"></ng-include>
+					</md-content>
+				</md-tab>
+			    <md-tab label="Restaurants">
+					<md-content class="md-padding">
+					 	<ng-include src="'templates/settings_admin.html'"> </ng-include>
+					</md-content>
+				</md-tab>
+                <md-tab label="Companies">
+                    <md-content class="md-padding">
+                        <ng-include src="'templates/company_admin.html'"> </ng-include>
+                    </md-content>
+                </md-tab>-->
+			</md-tabs>
+		</div>
+	  </div>
+      <!--border-->
+      <div class='col-sm-1 col-xs-1'></div>
+    </div><!-- row end-->
+ </div><!--container end-->

@@ -1,0 +1,1270 @@
+<!--  START CONTAINER FLUID -->
+
+<div class="container-fluid padding-25 sm-padding-10 sm-gutter">
+  <!-- START ROW -->
+  
+  <div class="panel panel-transparent ">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-tabs-fillup" data-init-reponsive-tabs="dropdownfx">
+      <li class="active">
+        <a data-toggle="tab" href="#tab-fillup1"><span>&nbsp; &nbsp; HR  &nbsp;&nbsp;</span></a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#tab-fillup2"><span>My Dashboard </span></a>
+      </li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab-fillup1">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-xlg-2 ">
+            <div class="row">
+                <div class="col-md-12 m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-8 panel no-border no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                  <i class="fa fa-users right_icon"></i>
+                  <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="panel-heading top-left top-right">
+                          <div class="panel-title text-black hint-text">
+                            <span class="font-montserrat fs-14 all-caps">Total Users
+                            <i class="fa fa-chevron-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-xs-height ">
+                      <div class="col-xs-height col-top relative">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="p-l-20">
+                              <h3 class="no-margin p-b-5 text-white">{{companyusers.length}}</h3>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div>
+              
+            </div>
+            <div class="row">
+              <div class="col-md-12 m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-9 no-border no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                  <i class="fa fa-slideshare right_icon"></i>
+                  <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="panel-heading  top-left top-right">
+                          <div class="panel-title text-black">
+                            <span class="font-montserrat fs-14 all-caps">Active Users  
+                            <i class="fa fa-chevron-right"></i>
+                            </span>
+                          </div>
+                          <div class="panel-controls">
+                            <ul>
+                              <li>
+                                <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="p-l-20 p-t-20">
+                             <span class="small hint-text">THIS WEEK</span>
+                          <h3 class="no-margin p-b-5 text-white">142</h3>
+                          <div class="clearfix"></div>
+                          <span class="small hint-text"><i class="fa fa-sort-up pt10 pull-left"></i>  60% higher Last Week</span>  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xlg-2 ">
+            <div class="row">
+                
+            
+                 <div class="col-md-12 m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-9 no-border widget-6 no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                  <i class="fa fa-spoon right_icon"></i>
+                  <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="panel-heading  top-left top-right">
+                          <div class="panel-title text-black">
+                            <span class="font-montserrat fs-14 all-caps">Total Lunches
+                            <i class="fa fa-chevron-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="p-l-20 p-t-20">
+                          <h3 class="no-margin p-b-5 text-white">{{userkpi.totallunches}}</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div>
+                
+            </div>
+            <div class="row">
+              <div class="col-md-12 m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-8 no-border  no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                  <i class="fa fa-cutlery right_icon"></i>
+                  <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="panel-heading top-left top-right">
+                          <div class="panel-title text-black hint-text">
+                            <span class="font-montserrat fs-14 all-caps">Lunches 
+                            <i class="fa fa-chevron-right"></i>
+                                
+                            </span>
+                              
+                          </div>
+                          <div class="panel-controls">
+                            <ul> 
+                              <li>
+                                <a data-toggle="refresh" class="portlet-refresh text-black" ng-click="refresh()">
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-xs-height ">
+                      <div class="col-xs-height col-top relative">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="p-l-20">
+                                <div class="clearfix"></div> 
+                              <span class="small hint-text whit-color">THIS WEEK</span>  
+                              <h3 class="no-margin p-b-5 text-white">{{userkpi.lunchesweek}}</h3>
+                            
+                            </div>
+                          </div>
+                               
+                          
+                        </div>
+                           <span class="small hint-text col-sm-12 pull-left whit-color"><i class="fa fa-sort-up pt5 pull-left"></i>  3 Lunches  then Last Week</span>   
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div> 
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 hidden-xlg m-b-10">
+            <div class="row">
+              <div class="col-md-12  m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-10 no-border bg1-white  no-margin widget-loader-bar widget09" pg-portlet progress="bar" on-refresh="refreshTest('.widget-10')"> 
+                  <div class="panel-heading top-left top-right ">
+                    <div class="panel-title text-black hint-text">
+                      <span class="font-montserrat fs-14 all-caps">Avg. Degree CENTRALITY
+                      <i class="fa fa-chevron-right"></i>
+                      </span>
+                    </div>
+                    <div class="panel-controls">
+                      <ul>
+                        <li>
+                          <a data-toggle="refresh" class="portlet-refresh text-black" href="">
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="panel-body p-t-40">
+                    <div class="row">
+                      <div class="col-sm-12">
+                       
+                            <div class="clearfix"></div>
+                            <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                            <div class="">
+                          <h3 class="no-margin p-b-5 ">{{userkpi.totalcompanyknown | number:'2'}}</h3>
+                          </div> </div></div>  
+                          
+                            
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                 <span class="small hint-text"><i class="fa fa-sort-up pt10 pull-left"></i>  30% higher Last Week</span> 
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div>
+            </div>
+            
+            <!-- START WIDGET -->
+            
+         <!--   <div class="row">
+              <div class="col-md-12">
+                <div class="widget-10 panel no-border bg1-white  no-margin widget-loader-bar" pg-portlet progress="bar" on-refresh="refreshTest('.widget-10')">
+                  <div class="panel-heading top-left top-right ">
+                    <div class="lucky-lunch">
+                      <a class="btn btn-primary btn-cons" href="#">
+                        <i aria-hidden="true" class="fa fa-cutlery"></i>
+                        &nbsp;Lucky Lunch</a>
+                    </div>
+                  </div>
+                </div> 
+              </div>
+            </div>-->
+            
+            <!-- END WIDGET -->
+          </div>
+          <div class="col-md-12 col-lg-12 hidden-xlg m-b-10 m-t-40">
+            <!-- START WIDGET -->
+            
+            <div class="row">
+              <div class="col-md-12">
+                <!-- START PANEL -->
+                <div class="w100p">
+                  <div class="panel-heading">
+                       <hr> 
+         <h2 class="text-success no-margin">Lucky Lunch</h2>
+                  </div>
+                 <div class="w100p pull-left pt20">
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-5">
+                             <div class="form-group">
+                            <label>Date</label>
+                        <div id="datepicker-component" class="input-group date col-sm-12">
+                      <input type="text" class="form-control"><span class="input-group-addon"><i
+								class="fa fa-calendar"></i></span>
+                    </div> 
+                            </div>
+                            </div>
+                              <div class="col-sm-5">
+                             <div class="form-group">
+                            <label>Number</label>
+                        <div id="datepicker-component" class="input-group date col-sm-12">
+                            <select class="form-control">
+                            <option> 1</option>
+                            <option> 2</option>
+                            <option> 3</option> 
+                            <option> 4</option>
+                            <option> 5</option>
+                            <option> 6</option>
+                            </select>
+                    </div> 
+                            </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <label>&nbsp;</label>
+                            <button class="btn btn-success">Set Lucky  Lunch</button> 
+                            </div>
+                        </div>
+                       
+                        
+                    </div>
+                      
+                      <div class="col-sm-7 hidden-xlg pull-right">
+            <!-- START WIDGET -->
+           <div class="widget-11-2 no-border panel-condensed no-margin widget-loader-circle" pg-portlet progress="circle" on-refresh="refreshTest('.widget-11-2')">
+              
+              <div class="auto-overflow auto-overflow01">
+                <table class="table table0 table-condensed table-hover">
+                  <tbody>
+                  <tr>
+                    <th width="35%">Date</th>  
+                    <th>Members</th>   
+                    </tr>
+                    <tr>
+   <td>15-Jan 2016</td>
+ 
+<td class="font-montserrat all-caps fs-12 col-md-7">
+<span class="member_name">Peter</span> 
+<span class="member_name">Peter 1</span> 
+<span class="member_name">Peter 2 </span>
+<span class="member_name">Peter 3</span> 
+</td> 
+                   
+                    </tr>
+                         <tr>
+   <td>16-Jan 2016</td>
+ 
+<td class="font-montserrat all-caps fs-12 col-md-7">
+<span class="member_name">Peter</span> 
+<span class="member_name">Peter 1</span> 
+<span class="member_name">Peter 2 </span>
+<span class="member_name">Peter 3</span> 
+</td>
+                   
+                    </tr>
+                         <tr>
+   <td>17-Jan 2016</td>
+ 
+<td class="font-montserrat all-caps fs-12 col-md-7">
+<span class="member_name">Peter</span> 
+<span class="member_name">Peter 1</span> 
+<span class="member_name">Peter 2 </span>
+<span class="member_name">Peter 3</span> 
+</td> 
+                   
+                    </tr>
+                           <tr>
+   <td>18-Jan 2016</td>
+ 
+<td class="font-montserrat all-caps fs-12 col-md-7">
+<span class="member_name">Peter</span> 
+<span class="member_name">Peter 1</span> 
+<span class="member_name">Peter 2 </span>
+<span class="member_name">Peter 3</span> 
+</td> 
+                   
+                    </tr>
+                           <tr>
+   <td>19-Jan 2016</td>
+ 
+<td class="font-montserrat all-caps fs-12 col-md-7">
+<span class="member_name">Peter</span> 
+<span class="member_name">Peter 1</span> 
+<span class="member_name">Peter 2 </span>
+<span class="member_name">Peter 3</span> 
+</td> 
+                   
+                    </tr> 
+                 
+                   
+                   
+                   
+                  
+                  </tbody>
+                </table>
+ 
+              </div>
+                                <div class="pt15">
+<p class="small no-margin">
+<a href="#"><i class="fa fs-16 fa-arrow-circle-o-down text-success m-r-10"></i></a>
+<span class="hint-text ">Show more </span> 
+</p>
+</div> 
+            </div> 
+            <!-- END WIDGET -->
+          </div>
+                   </div> 
+                    
+                  
+                 
+                </div>
+                <!-- END PANEL -->
+              </div>
+            </div>
+            
+            <!-- END WIDGET -->
+          </div>
+          <div class="clearfix"></div>
+          <div class="widget-11-2 no-border panel-condensed no-margin widget-loader-circle" pg-portlet progress="circle" on-refresh="refreshTest('.widget-11-2')">
+            <div class="panel-heading top-right">
+              <div class="panel-controls">
+                <ul>
+                  <li>
+                    <a data-toggle="refresh" class="portlet-refresh text-black" ng-click="refresh()">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="padding-10">
+              <hr />
+             
+              <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+                <div class="row pb15">
+                <div class="col-sm-8">
+                    
+                   
+                     
+              <!--   <a class="btn btn-complete" id="show-modal" ui-sref="#" href="#">
+           
+            PDF </a> 
+                 <a class="btn btn-complete" id="show-modal" ui-sref="#" href="#">
+           CSV </a>
+                    <a class="btn btn-complete" id="show-modal" ui-sref="#" href="#">
+           
+            Excel </a> 
+                     <a class="btn btn-complete" id="show-modal" ui-sref="#" href="#"> 
+        Copy</a>--></div> 
+                    <div class="col-sm-4">
+                     <a class="btn btn-success   pull-right" id="show-modal" data-toggle="modal" data-target="#testModel">
+          <i class="fa fa-plus"></i> 
+          Add User</a>  
+		  
+                    </div>
+                </div>
+                
+               <div class="modal fade" id="testModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+   <div class="modal-dialog">  
+       <form id="form-adduser" name="newUser" class="p-t-15" role="form" ng-submit="updateUser(newUser)" novalidate>
+           <div class="modal-content">
+               <div class="modal-header clearfix ">
+                   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                       <i class="pg-close fs-14"></i>
+                   </button>
+                   <h4 class="p-b-5"><span class="semi-bold">Add New User</span> </h4>
+               </div>
+               <div class="modal-body">
+
+                   <div class="row">
+                       <div class="col-sm-12">
+                           <div pg-form-group class="form-group form-group-default" ng-class="{ 'has-error' : newUser.name.$invalid && !newUser.name.$pristine }">
+                               <label>name</label>
+                               <div class="controls">
+                                   <input type="text" name="name" placeholder="User Name" class="form-control" ng-model="user.name" required>
+                               </div>
+                           </div>
+                           <label class="error" for="name" ng-show="newUser.name.$invalid && !newUser.name.$pristine">This field is required.</label>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-sm-12">
+                           <div pg-form-group class="form-group form-group-default">
+                               <label>Email</label>
+                               <div class="controls">
+                                   <input type="email" name="email" placeholder="User Email" class="form-control" ng-model="user.email" required>
+                               </div>
+                           </div>
+                           <label class="error" for="email" ng-show="newUser.email.$invalid && !newUser.email.$pristine">Please enter correct email.</label>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-sm-6">
+                           <div pg-form-group class="form-group form-group-default">
+                               <label>Gender</label>
+                               <select ng-model="user.gender" class="form-control">
+                                   <option selected value="1">Male</option>
+                                   <option value="2">Female</option>
+                               </select>
+                               <!--    <input id="appPrice" type="text" class="form-control" placeholder="">-->
+                           </div>
+                       </div>
+                       <div class="col-sm-6">
+                           <div pg-form-group class="form-group form-group-default">
+                               <label>Phone</label>
+                               <input id="phone" type="text" class="form-control" ng-model="user.phone" placeholder="Phone Number">
+                           </div>
+                       </div>
+
+
+                   </div>
+
+               </div>
+               <div class="modal-footer">
+                   <button id="add-app" type="submit" ng-disabled="newUser.$invalid" class="btn btn-primary  btn-cons">Add</button>
+                   <button type="button" data-dismiss="modal" aria-hidden="true" class="btn btn-cons "> Close</button>
+               </div>
+           </div>
+       </form>
+      <!-- /.modal-content -->
+    </div>
+  </div>
+              <div class="panel panel-transparent">
+                 <div class="panel-heading">
+            <div class="panel-title"><h2 class="text-success no-margin">User Listing</h2>
+            </div>
+            <div class="export-options-container pull-right"></div>
+            <div class="clearfix"></div>
+        </div>
+		 <div class="panel-body">
+                  <table datatable="ng" class="table table-striped" id="tableWithExportOptions" dt-options="dtOptions1" dt-column-defs="dtColumnDefs1" ui-jq="dataTable" ui-options="options">
+    
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th class="text-center">Email</th>
+                      <th class="text-center">Phone</th>
+                      <th width="12%">Role</th>
+                    <th class="text-center">Total Lunches</th>
+                    <th class="text-center">Degree  </th>
+                    <th class="text-center">Last Lunch</th>
+                    
+                    <th class="text-center"> Action </th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                    <tr ng-repeat="usr in companyusers">
+
+                        <td class="v-align-middle">{{ usr.name }}</td>
+                        <td class="v-align-middle">{{ usr.email }}</td>
+                        <td class="v-align-middle">{{ usr.phone }}</td>
+                        <td class="v-align-middle">
+                            <select>
+                                <option ng-repeat="ur in usr.role"
+                                        value="{{ur}}">
+                                    {{ur}}
+                                </option>
+                            </select>
+                        </td>
+                        <td class="v-align-middle">{{ usr.totallunches }}</td>
+                        <td class="v-align-middle">{{ usr.knownpeople | number:'2' }}</td>
+                        <td class="v-align-middle">{{ usr.lastlunch | timeago}}</td>
+                    
+                        <td class="v-align-middle text-center">
+                            <div class="btn-group">
+                                <div class="actionbtn">
+                                    <button title="Edit User" ng-click="getUser($event,$index)" class="btn btn-success">
+                                        <i class="fa fa-pencil"></i>
+                                    </button>
+                                    <button title="Remove User" ng-click="deleteUser($event,$index)" class="btn btn-danger">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                    <button ng-show="usr.isPause" title="Active User" class="btn btn-primary" ng-click="updateStatus($event,$index,false)">
+                                        <i class="fa fa-play"></i>
+                                    </button>
+                                    <button ng-show="!usr.isPause" title="Pause User" class="btn btn-primary" ng-click="updateStatus($event,$index,true)">
+                                        <i class="fa fa-pause"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                 
+              
+           
+          
+                </tbody>
+              </table> 
+                
+                </div>
+                 </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane " id="tab-fillup2">
+        <div class="row">
+          <div class="col-md-4 col-lg-4 col-xlg-2 ">
+            <div class="row">
+              <div class="col-md-12 m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-8 no-border  no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                  <i class="fa fa-users right_icon"></i>
+                  <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="panel-heading top-left top-right">
+                          <div class="panel-title text-black hint-text">
+                            <span class="font-montserrat fs-14 all-caps">Total new people met
+                            <i class="fa fa-chevron-right"></i>
+                            </span>
+                          </div>
+                          <div class="panel-controls">
+                            <ul>
+                              <li>
+                                <a data-toggle="refresh" class="portlet-refresh text-black" ng-click="refresh()">
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-xs-height ">
+                      <div class="col-xs-height col-top relative">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="p-l-20">
+                              <h3 class="no-margin p-b-5 text-white">50</h3>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-9 no-border  no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                  <i class="fa fa-user right_icon"></i>
+                  <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="panel-heading  top-left top-right">
+                          <div class="panel-title text-black">
+                            <span class="font-montserrat fs-14 all-caps">User edge length
+                            <i class="fa fa-chevron-right"></i>
+                            </span>
+                          </div>
+                          <div class="panel-controls">
+                            <ul>
+                              <li>
+                                <a ng-click="refresh()" class="portlet-refresh text-black" data-toggle="refresh">
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="p-l-20 p-t-20">
+                          <h3 class="no-margin p-b-5 text-white">60</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 col-xlg-2 ">
+            <div class="row">
+              <div class="col-md-12 m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-8 no-border  no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-8')">
+                  <i class="fa fa-university right_icon"></i>
+                  <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="panel-heading top-left top-right">
+                          <div class="panel-title text-black hint-text">
+                            <span class="font-montserrat fs-14 all-caps">Total restraunts visited
+                            <i class="fa fa-chevron-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-xs-height ">
+                      <div class="col-xs-height col-top relative">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <div class="p-l-20">
+                              <h3 class="no-margin p-b-5 text-white">60</h3>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 m-b-10">
+                <!-- START WIDGET -->
+                <div class="widget-9 no-border widget-6 no-margin widget-loader-bar right_icon_sect" pg-portlet progress="bar" on-refresh="refreshTest('.widget-9')">
+                  <i class="fa fa-spoon right_icon"></i>
+                  <div class="container-xs-height full-height">
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="panel-heading  top-left top-right">
+                          <div class="panel-title text-black">
+                            <span class="font-montserrat fs-14 all-caps">Total number of lunches
+                            <i class="fa fa-chevron-right"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row-xs-height">
+                      <div class="col-xs-height col-top">
+                        <div class="p-l-20 p-t-20">
+                          <h3 class="no-margin p-b-5 text-white">80</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- END WIDGET -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-4 hidden-xlg m-b-10">
+            <!-- START WIDGET -->
+            <div class="widget-11-2 no-border panel-condensed no-margin widget-loader-circle" pg-portlet progress="circle" on-refresh="refreshTest('.widget-11-2')">
+              <div class="padding-10">
+                <div class="pull-left">
+                  <h2 class="text-success no-margin fs-16"><strong>Recent  Restaurant  Visited</strong></h2>
+                </div>
+                
+                <div class="clearfix"></div>
+              </div>
+              <div class="auto-overflow widget-11-2-table">
+                <table class="table table-condensed table-hover">
+                  <tbody>
+                    <tr>
+                      <td class="font-montserrat all-caps fs-12 col-md-7">Harry's at Shenton Way</td>
+                      <td class="text-right b-r b-dashed b-grey col-lg-1"></td>
+                      <td class="col-md-4"><span class="font-montserrat fs-18">15-Jan 2016</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-montserrat all-caps fs-12 col-md-7">Harry's at Shenton Way</td>
+                      <td class="text-right b-r b-dashed b-grey col-lg-1"></td>
+                      <td class="col-md-4"><span class="font-montserrat fs-18">15-Jan 2016</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-montserrat all-caps fs-12 col-md-7">Harry's at Shenton Way</td>
+                      <td class="text-right b-r b-dashed b-grey col-lg-1"></td>
+                      <td class="col-md-4"><span class="font-montserrat fs-18">15-Jan 2016</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-montserrat all-caps fs-12 col-md-7">Harry's at Shenton Way</td>
+                      <td class="text-right b-r b-dashed b-grey col-lg-1"></td>
+                      <td class="col-md-4"><span class="font-montserrat fs-18">15-Jan 2016</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-montserrat all-caps fs-12 col-md-7">Harry's at Shenton Way</td>
+                      <td class="text-right b-r b-dashed b-grey col-lg-1"></td>
+                      <td class="col-md-4"><span class="font-montserrat fs-18">15-Jan 2016</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-montserrat all-caps fs-12 col-md-7">Harry's at Shenton Way</td>
+                      <td class="text-right b-r b-dashed b-grey col-lg-1"></td>
+                      <td class="col-md-4"><span class="font-montserrat fs-18">15-Jan 2016</span></td>
+                    </tr>
+                    <tr>
+                      <td class="font-montserrat all-caps fs-12 col-md-7">Harry's at Shenton Way</td>
+                      <td class="text-right b-r b-dashed b-grey col-lg-1"></td>
+                      <td class="col-md-4"><span class="font-montserrat fs-18">15-Jan 2016</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- END WIDGET -->
+          </div>
+          
+          
+          
+          
+<div class="row">          
+
+
+ <!-- START PANEL -->
+    <div class="col-sm-12"><div class="panel panel-transparent m-t-20">
+      <div class="panel-heading">
+        <div class="panel-title">Restaurant History</div>
+        
+        <div class="clearfix"></div>
+      </div>
+      <div class="panel-body">
+        <table class="table table-hover demo-table-dynamic companytable companytable01" id="tableWithDynamicRows5" ui-jq="dataTable">
+          <thead>
+            <tr>
+              <th width="20%" class="v-align-top">
+              	
+              Restaurant Name</th>
+               
+             
+             
+              <th class="v-align-top text-left"> Ratings </th>
+            
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="v-align-middle"><span class="date_sect">Aug 9, 2016</span><p>Harry's at Shenton Way</p></td>
+               
+           
+              
+              <td class="v-align-middle text-left">
+              	<ul class="rating_sect">
+                	<li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                    <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                   
+                    <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                     <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                  <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                 
+                </ul>
+              <p>Delivery of food is too good</p></td> 
+              
+            </tr>
+         <tr>
+              <td class="v-align-middle"><span class="date_sect">Aug 9, 2016</span><p>Harry's at Shenton Way</p></td>
+         
+           
+             
+              <td class="v-align-middle text-left">
+              	<ul class="rating_sect">
+                	<li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                    <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                   
+                    <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                     <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                  <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                 
+                </ul>
+              <p>Delivery of food is too good</p></td> 
+             
+            </tr>
+            
+                       <tr>
+              <td class="v-align-middle"><span class="date_sect">Aug 9, 2016</span><p>Harry's at Shenton Way</p></td>
+               
+           
+             
+             <td class="v-align-middle text-left">
+              	<ul class="rating_sect">
+                	<li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                    <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                   
+                    <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                     <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                  <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                 
+                </ul>
+              <p>Delivery of food is too good</p></td> 
+             
+            </tr>
+            
+            
+                       <tr>
+              <td class="v-align-middle"><span class="date_sect">Aug 9, 2016</span><p>Harry's at Shenton Way</p></td>
+              
+           
+             
+             <td class="v-align-middle text-left">
+              	<ul class="rating_sect">
+                	<li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                    <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                   
+                    <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                     <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                  <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                 
+                </ul>
+              <p>Delivery of food is too good</p></td> 
+             
+            </tr>
+            
+            
+                       <tr>
+              <td class="v-align-middle"><span class="date_sect">Aug 9, 2016</span><p>Harry's at Shenton Way</p></td>
+             
+           
+             
+             <td class="v-align-middle text-left">
+              	<ul class="rating_sect">
+                	<li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                    <li> <a href="#"> <i class="fa fa-star"></i> </a> </li>
+                   
+                    <li> <a href="#"><i class="fa fa-star-half-o"></i></a></li>
+                     <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                  <li><a href="#"><i class="fa fa-star-o"></i></a></li>
+                 
+                </ul>
+              <p>Delivery of food is too good</p></td>  
+             
+            </tr>
+            
+             
+            
+          </tbody>
+        </table>
+      </div>
+    </div></div>
+    <!-- END PANEL --></div>
+        
+     <div class="clearfix"></div>   
+ 
+ 
+ <div class="panel">
+	<div class="panel-body">
+
+    <div class="clearfix"></div>   
+      <!--beginning of card-->
+      <div class="step_one">
+      <div class='simple-card'>   
+        <div class='header01'>
+          <h4> About You </h4>
+        </div> 
+      </div>
+
+      <div class='simple-card'>   
+      
+      <div class='row' style='padding: 0;'>
+        
+        <!-- user card display! -->
+        <div class='col-sm-4'>
+          
+          <div class='simple-card zero-padding panel panel-default' id='user_card'>
+
+
+              <div class='panel-body card-body'> 
+                
+            <div class='file-upload file-upload_sect'> 
+            <input type="file" id="fileup" class="hide">
+			<button onclick="document.getElementById('fileup').click();">
+                <img src="assets/img/businesswoman.png" class="img-responsive user-imag" alt="" longdesc="#" />
+                </button> 
+			</div>
+
+<!--                 <p class='text-center bottom-align'>{{ active_user.tagline }} 
+                <hr style='padding:0; margin:0'>
+                </p> -->
+<!--                 <p class='text-center bottom-align'><span class="glyphicon glyphicon-phone"></span> {{ active_user.phone }} 
+                </p> -->
+              
+              <hr style='margin:20px'/>
+
+              <h4 style='margin-bottom:4px'>neeraj</h4>
+              <h6>devs.neeraj@gmail.com</h6>
+              
+              </div>
+
+          </div>
+        
+        </div>
+
+        <div class='col-sm-8'>
+            	<div class="row">
+              <div class='col-sm-6'>
+                <md-input-container>
+                  <label>Name</label>
+                  <input class="form-control" ng-model="active_user.name" disabled>
+                </md-input-container>
+                <md-input-container>
+                  <label>Email</label>
+                  <input checked="checked" class="form-control" ng-model="active_user.email" disabled>
+                </md-input-container>
+                <md-input-container>
+                  <label>Phone</label>
+                  <input class="form-control" ng-model="active_user.phone">
+                </md-input-container>
+              </div>
+              <div class='col-sm-6'>
+                <md-input-container>
+                  <label>Designation</label>
+                  <input  class="form-control" clng-model="active_user.title">
+                </md-input-container>
+                <md-input-container>
+                  <label>Password</label>
+                  <input class="form-control" ng-model="active_user.password">
+                </md-input-container>
+              <md-input-container>
+              <label>Opt in</label>
+                <div data-toggle="buttons" class="btn-group">
+<label class="btn btn-complete active">
+<input type="checkbox" checked=""> S
+</label>
+<label class="btn btn-complete ">
+<input type="checkbox"> M
+</label>
+<label class="btn btn-complete">
+<input type="checkbox"> T
+</label>
+
+
+<label class="btn btn-complete">
+<input type="checkbox"> W
+</label>
+<label class="btn btn-complete">
+<input type="checkbox"> T
+</label>
+<label class="btn btn-complete">
+<input type="checkbox"> F
+</label>
+<label class="btn btn-complete">
+<input type="checkbox"> S
+</label>
+</div>
+ 
+	 </md-input-container>
+<!--                 <md-input-container>
+                  <label>Nationality</label>
+                  <input ng-model="active_user.nationality">
+                </md-input-container> -->
+              </div>
+           
+           		<div class="col-sm-12">
+                <md-input-container>
+                <label>LinkedIn Profile Link</label>
+                <textarea class="form-control" id='pref' ng-model="active_user.linkedin" md-maxlength="50" rows="1"></textarea>
+              </md-input-container> 
+                </div>
+                
+                 
+                
+                </div>
+            <div class='row' style='margin:1%;'>  
+<!--               <md-input-container>
+                <label>You, in 50 characters!</label>
+                <textarea id='pref' ng-model="active_user.tagline" md-maxlength="50" rows="1"></textarea>
+              </md-input-container> -->
+              
+            </div>
+        </div>
+
+        </div>
+      </div>
+      	</div>
+      <!--beginning of preferences-->
+       
+       
+
+  	<div class="step_one">
+    	<div class="simple-card">   
+        <div class="header01">
+          <h4> Cuisine </h4>
+        </div> 
+      </div>
+      
+      <div class="row">
+      <ul class="tags_list">
+      	 
+        <li>American <a href="#"><i class="fa fa-close"></i></a></li>
+        <li>Australian <a href="#"><i class="fa fa-close"></i></a></li>
+           <li>Chinese <a href="#"><i class="fa fa-close"></i></a></li> 
+      
+      </ul>
+       
+      	<div class="checkbox_sect">
+      <div class="checkbox check-success  ">
+                      <input type="checkbox" id="checkbox2" value="1" checked="checked">
+                      <label for="checkbox2">Strictly Vegeterian?</label>
+                    </div> 
+      	 
+         <div class="checkbox check-success  ">
+                      <input type="checkbox" id="checkbox3" value="1" checked="checked">
+                      <label for="checkbox3">Strictly Halal?</label>
+                    </div>  
+                    </div>
+       
+      
+      <div class="list_box">
+      	<div class="col-sm-3 col-xs-6 ng-scope">
+                        <div  class="cuisine-card card panel panel-default ng-pristine ng-valid ng-touched" role="button" tabindex="0" aria-invalid="false">
+                            <div class=" card-heading">
+                              <h4 class="text-center ng-binding">American</h4> 
+                            </div>           
+                            <div class=" card-body zero-padding">                        
+                              <img style="height:150px; width: 100%;" class="img-responsive cuisine-photo" src="assets/img/american.jpg">
+                              <i  class="fa fa-check-circle-o fa-4x" style="position: absolute; top: 36%; left: 40%; color: rgb(106, 196, 3);" aria-hidden="false"></i>
+                            </div>
+
+                        </div>
+                </div> 
+                <div class="col-sm-3 col-xs-6 ng-scope">
+                        <div  class="cuisine-card card panel panel-default ng-pristine ng-valid ng-touched" role="button" tabindex="0" aria-invalid="false">
+                            <div class=" card-heading">
+                              <h4 class="text-center ng-binding">Australian</h4> 
+                            </div>           
+                            <div class=" card-body zero-padding">                        
+                              <img style="height:150px; width: 100%;" class="img-responsive cuisine-photo" src="assets/img/american.jpg">
+                              <i  class="fa fa-check-circle-o fa-4x" style="position: absolute; top: 36%; left: 40%; color: rgb(106, 196, 3);" aria-hidden="false"></i>
+                            </div>
+
+                        </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 ng-scope">
+                        <div  class="cuisine-card card panel panel-default ng-pristine ng-valid ng-touched" role="button" tabindex="0" aria-invalid="false">
+                            <div class=" card-heading">
+                              <h4 class="text-center ng-binding">Chinese</h4> 
+                            </div>           
+                            <div class=" card-body zero-padding">                        
+                              <img style="height:150px; width: 100%;" class="img-responsive cuisine-photo" src="assets/img/american.jpg">
+                              <i  class="fa fa-check-circle-o fa-4x" style="position: absolute; top: 36%; left: 40%; color: rgb(106, 196, 3);" aria-hidden="false"></i>
+                            </div>
+
+                        </div>
+                </div>
+                 <div class="col-sm-3 col-xs-6 ng-scope">
+                        <div  class="cuisine-card card panel panel-default ng-pristine ng-valid ng-touched" role="button" tabindex="0" aria-invalid="false">
+                            <div class=" card-heading">
+                              <h4 class="text-center ng-binding">French</h4> 
+                            </div>           
+                            <div class=" card-body zero-padding">                        
+                              <img style="height:150px; width: 100%;" class="img-responsive cuisine-photo" src="assets/img/american.jpg">
+                             
+                            </div>
+
+                        </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 ng-scope">
+                        <div  class="cuisine-card card panel panel-default ng-pristine ng-valid ng-touched" role="button" tabindex="0" aria-invalid="false">
+                            <div class=" card-heading">
+                              <h4 class="text-center ng-binding">American</h4> 
+                            </div>           
+                            <div class=" card-body zero-padding">                        
+                              <img style="height:150px; width: 100%;" class="img-responsive cuisine-photo" src="assets/img/american.jpg">
+                              
+                            </div>
+
+                        </div>
+                </div> 
+                <div class="col-sm-3 col-xs-6 ng-scope">
+                        <div  class="cuisine-card card panel panel-default ng-pristine ng-valid ng-touched" role="button" tabindex="0" aria-invalid="false">
+                            <div class=" card-heading">
+                              <h4 class="text-center ng-binding">American</h4> 
+                            </div>           
+                            <div class=" card-body zero-padding">                        
+                              <img style="height:150px; width: 100%;" class="img-responsive cuisine-photo" src="assets/img/american.jpg">
+                             
+                            </div>
+
+                        </div>
+                </div>
+                <div class="col-sm-3 col-xs-6 ng-scope">
+                        <div  class="cuisine-card card panel panel-default ng-pristine ng-valid ng-touched" role="button" tabindex="0" aria-invalid="false">
+                            <div class=" card-heading">
+                              <h4 class="text-center ng-binding">American</h4> 
+                            </div>           
+                            <div class=" card-body zero-padding">                        
+                              <img style="height:150px; width: 100%;" class="img-responsive cuisine-photo" src="assets/img/american.jpg">
+                              
+                            </div>
+
+                        </div>
+                </div>
+                 <div class="col-sm-3 col-xs-6 ng-scope">
+                        <div  class="cuisine-card card panel panel-default ng-pristine ng-valid ng-touched" role="button" tabindex="0" aria-invalid="false">
+                            <div class=" card-heading">
+                              <h4 class="text-center ng-binding">American</h4> 
+                            </div>           
+                            <div class=" card-body zero-padding">                        
+                              <img style="height:150px; width: 100%;" class="img-responsive cuisine-photo" src="assets/img/american.jpg">
+                               
+                            </div>
+
+                        </div>
+                </div> 
+                
+</div>                
+      </div>
+    </div>
+      
+      
+      <div class="step_one">
+    	<div class="simple-card">   
+        <div class="header01">
+          <h4> Lunchmates </h4>
+        </div> 
+        
+      </div>
+      	
+        <ul class="tabs_abc">
+        	<li class="button"><a href="#"><i class="fa fa-chevron-left"></i> </a></li>
+            	<li><a href="#">A</a></li>
+                <li><a href="#">b</a></li>
+                <li><a href="#">c</a></li>
+                <li><a href="#">d</a></li>
+                <li><a href="#">e</a></li>
+                <li class="active"><a href="#">f</a></li>
+                <li><a href="#">g</a></li>
+                <li><a href="#">h</a></li>
+                <li><a href="#">i</a></li>
+                <li><a href="#">j</a></li> 
+                <li><a href="#">k</a></li>
+                <li><a href="#">l</a></li>
+                <li><a href="#">m</a></li>
+                <li><a href="#">n</a></li>
+                <li><a href="#">o</a></li>
+                <li><a href="#">p</a></li>
+                <li><a href="#">r</a></li>
+                <li><a href="#">s</a></li>
+                <li><a href="#">t</a></li>
+                <li><a href="#">u</a></li>
+                <li><a href="#">v</a></li>
+                <li><a href="#">w</a></li>
+                <li><a href="#">x</a></li>
+                <li><a href="#">y</a></li>
+                <li><a href="#">z</a></li>
+                
+            <li class="button"><a href="#"><i class="fa fa-chevron-right"></i> </a></li>
+        </ul>
+        <div class="block_list">
+
+<div class="col-sm-4 ng-pristine ng-valid ng-scope ng-touched" tabindex="0" aria-invalid="false">
+                  <br>
+                  
+                  <div style="min-height: 400px;" class="card panel panel-default">
+                    <div style="padding: 20px;" class="panel-body card-body">
+                      <button title="favorite" ng-click="addToKnown(user._id)" ng-model="user" class="btn btn-info user-btn ng-pristine ng-untouched ng-valid" tabindex="0" aria-invalid="false">
+                        <span class="fa fa-star"></span> 
+                      </button>
+                      <button title="Block" class="btn btn-info pull-right user-btn ng-pristine ng-untouched ng-valid" tabindex="0" aria-invalid="false">
+                        <span class="fa fa-user-times"></span>   
+                      </button>
+                      <img class="img-responsive user-image" ng-src="http://res.cloudinary.com/hzif3kbk7/image/upload/c_scale,h_200,w_200/v1464755705/misc/Businesswoman.svg" src="http://res.cloudinary.com/hzif3kbk7/image/upload/c_scale,h_200,w_200/v1464755705/misc/Businesswoman.svg"> 
+                    
+                      <hr style="margin:20px"> 
+
+                      <h4 style="margin-bottom:4px" class="ng-binding">bnnn</h4>
+                      <h6 class="ng-binding"></h6>
+                      <h6 class="ng-binding">nn@nn.cv</h6>
+                    </div>
+ 
+
+
+                  </div>
+
+                </div> 
+</div>
+        
+       
+      </div>
+
+
+      <div class='row text-center'>
+          <button class='btn btn-success' style='margin: 20px; background-color: #4b4b4b; border:none;' ng-click="updateUser(active_user)">Save
+          <i id='spinner' class="fa fa-refresh fa-spin fa-fw" aria-hidden="true" style='display:none;'></i>
+          </button>
+      </div>
+
+    </div> 
+       
+          
+          </div>
+          
+          
+          
+          
+        </div> 
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END CONTAINER FLUID -->

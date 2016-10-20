@@ -1,0 +1,208 @@
+
+
+    <form ng-show="isCompanyForm" id="companyform" name="companyform" ng-submit="addCompany()">
+        <div id='user_card' class='row'>
+            <md-input-container class='col-sm-3'>
+                <img ng-src="{{active_companypicture}}" class='img-responsive user-image' />
+            </md-input-container>
+            <md-input-container class='col-sm-3'>
+                <label>Name</label>
+                <input ng-model="newcompany.name" required>
+            </md-input-container>
+            <md-input-container class='col-sm-3'>
+                <label>Country</label>
+                <input ng-model="newcompany.country">
+            </md-input-container>
+            <md-input-container class='col-sm-3'>
+                <label>City</label>
+                <input ng-model="newcompany.city">
+            </md-input-container>
+            <md-input-container class='col-sm-3'>
+                <label>Branch Name</label>
+                <input ng-model="newcompany.branchname">
+            </md-input-container>
+            <md-input-container class='col-sm-3'>
+                <label>User Unit Price</label>
+                <input type="number" ng-model="newcompany.userunitprice">
+            </md-input-container>
+            <md-input-container class='col-sm-3'>
+                <label style="position: absolute !important;top: -20px !important;">Registration Date</label>
+                <datepicker date-format="MM/dd/yyyy">
+                    <input ng-model="newcompany.regdate" type="text" />
+                </datepicker>
+            </md-input-container>
+            <!--<md-input-container class='col-sm-3'>
+                <label>Registration Date</label>
+                <input type="date" ng-model="newcompany.regdate" required>
+            </md-input-container>-->
+            <md-input-container class='col-sm-3'>
+                <div class='file-upload'></div>
+            </md-input-container>
+
+
+            <button ng-show="!isEdit" class="btn btn-info" type="submit">Add Company</button>
+
+            <button ng-show="isEdit" class="btn btn-info" type="submit">Update</button>
+            <input type="button" class="btn btn-warning" value="Cancel" ng-click="cancelCompany()" />
+
+        </div>
+        <!--<a href="#terms">sdfsdfsdf</a>-->
+    </form>
+    <form ng-show="!isCompanyForm" id="userform" name="userform" ng-submit="addUsertoCompany()">
+        <div class='row'>
+
+
+
+            <md-input-container class='col-sm-2'>
+                <p>Company: <b> {{currentName}}</b></p>
+            </md-input-container>
+            <md-input-container class='col-sm-2'>
+                <label>Name</label>
+                <input ng-model="newuser.name" required />
+            </md-input-container>
+            <md-input-container class='col-sm-2'>
+                <label>Email</label>
+                <input ng-model="newuser.email" required />
+            </md-input-container>
+            <md-input-container class='col-sm-1'>
+                <label>Gender</label>
+                <input type="number" min="1" max="2" ng-model="newuser.gender" required />
+            </md-input-container>
+            <div>
+                <label ng-repeat="dayName in alldays">
+                    <input type="checkbox"
+                           name="selectedDays[]"
+                           value="{{dayName}}"
+                           ng-checked="selection.indexOf(dayName) > -1"
+                           ng-click="toggleSelection(dayName)"> {{dayName}}
+                </label>
+            </div>
+            <md-input-container class='col-sm-2'>
+                <button ng-show="!isUserEdit" class="btn btn-info" type="submit">Add User</button>
+                <button ng-show="isUserEdit" class="btn btn-info" type="submit">Update</button>
+            </md-input-container>
+            <md-input-container class='col-sm-2'>
+                <button class="btn btn-danger" ng-click="cancelUser()" type="button">Cancel</button>
+            </md-input-container>
+            <table datatable="ng" dt-options="dtOptions1" dt-column-defs="dtColumnDefs1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="usr in companyusers | filter:{company:currentId}">
+                        <td>{{ usr.name }}</td>
+                        <td>{{ usr.email }}</td>
+                        <td>{{ usr.gender }}</td>
+                        <td>
+                            <input type="button" class="btn btn-info" value="Edit" ng-click="getUser($event,$index)" />&nbsp;&nbsp;<input type="button" class="btn btn-danger" value="Delete" ng-click="deleteUser($event,$index)" />
+                            <input ng-show="usr.isPause" type="button" class="btn btn-info" value="Active" ng-click="updateStatus($event,$index,false)" />
+                            <input ng-show="!usr.isPause" type="button" class="btn btn-danger" value="Pause" ng-click="updateStatus($event,$index,true)" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--<div style="padding: 10px;border:3px solid #ddd;float: left;width: 100%;margin-bottom: 50px;">
+                <div class='row' style="border-bottom: 1px solid black;">
+                    <div class='col-sm-2'>Name</div>
+                    <div class='col-sm-2'>Email</div>
+                    <div class='col-sm-1'>Gender</div>
+                </div>
+                <div ng-repeat="usr in users | filter:{company:currentId}">
+                    <div class='row' style="border-bottom: 1px solid black;border-top: 1px solid black;display:none;">{{ usr._id }}</div>
+                    <div class='row text-left'>
+                        <div class='col-sm-2'>{{ usr.name }}</div>
+                        <div class='col-sm-2'>{{ usr.email }}</div>
+                        <div class='col-sm-1'>{{ usr.gender }}</div>
+                        <div class='col-sm-3'><input type="button" class="btn btn-info" value="Edit" ng-click="getUser($event,$index)" />&nbsp;&nbsp;<input type="button" class="btn btn-danger" value="Delete" ng-click="deleteUser($event,$index)" /></div>
+
+                    </div>
+                </div>
+            </div>-->
+        </div>
+
+    </form>
+<div id="exportable">
+    <table datatable="ng" dt-options="dtOptions2" dt-column-defs="dtColumnDefs">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Branch Name</th>
+                <th>Registration Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat-start="company in companies">
+                <td>
+                    <button ng-if="company.expanded" ng-click="company.expanded = false">-</button>
+                    <button ng-if="!company.expanded" ng-click="company.expanded = true">+</button>
+                </td>
+                <td>{{ company.name }} {{ company.expanded }}</td>
+                <td>{{ company.country }}</td>
+                <td>{{ company.city }}</td>
+                <td>{{ company.branchname }}</td>
+                <td>{{company.regdate|date:'MM/dd/yyyy'}}</td>
+                <td><input type="button" class="btn btn-info" value="Edit" ng-click="getCompany($event,$index)" />&nbsp;&nbsp;<input type="button" class="btn btn-danger" value="Delete" ng-click="deleteCompany($event,$index)" />&nbsp;&nbsp;<input type="button" class="btn btn-info" value="Add User" ng-click="addCompanyUser($event,$index)" /></td>
+            </tr>
+           
+            <tr ng-if="company.expanded" ng-repeat-end="">
+                <td>{{company.name}}</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <!--<div class='row' style="border-bottom: 1px solid black;">
+        <div class='col-sm-2'>Name</div>
+        <div class='col-sm-2'>Country</div>
+        <div class='col-sm-1'>City</div>
+        <div class='col-sm-2'>Branch Name</div>
+        <div class='col-sm-2'>Registration Date</div>
+
+    </div>
+    <div ng-repeat="company in companies">
+        <div class='row' style="border-bottom: 1px solid black;border-top: 1px solid black;display:none; ">{{ company._id }}</div>
+        <div class='row text-left'>
+            <div class='col-sm-2'>{{ company.name }}</div>
+            <div class='col-sm-2'>{{ company.country }}</div>
+            <div class='col-sm-1'>{{ company.city }}</div>
+            <div class='col-sm-2'>{{ company.branchname }}</div>
+            <div class='col-sm-2'>{{company.regdate|date:'MM/dd/yyyy'}}</div>
+            <div class='col-sm-3'><input type="button" class="btn btn-info" value="Edit" ng-click="getCompany($event,$index)" />&nbsp;&nbsp;<input type="button" class="btn btn-danger" value="Delete" ng-click="deleteCompany($event,$index)" />&nbsp;&nbsp;<input type="button" class="btn btn-info" value="Add User" ng-click="addCompanyUser($event,$index)" /></div>
+
+        </div>
+    </div>-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var element = angular.element($('#user_card'));
+            var controller = element.controller();
+            var scope = element.scope();
+
+
+            $('.file-upload').append(
+              $.cloudinary.unsigned_upload_tag("lunchedin_user",
+                  { cloud_name: 'hzif3kbk7' }).bind('cloudinarydone', function (e, data) {
+
+                      scope.$apply(function () {
+                          console.log(data.result.secure_url)
+                          scope.$parent.updateUserPicture(data.result.secure_url);
+                      });
+
+                  }));
+        })
+    </script>

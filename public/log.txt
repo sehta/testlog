@@ -1,0 +1,4 @@
+==============Request Date: Thu Oct 20 2016 16:16:45 GMT+0530 (India Standard Time)============
+URL:http://localhost:3000/api/addLuckyLunch
+Body:{"availableLunch":"4","date":"Fri Jan 27 2017 00:00:00 GMT+0530 (India Standard Time)","companyid":"57a44e08fe7281983ad4efd4"}
+============================
